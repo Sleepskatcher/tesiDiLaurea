@@ -18,30 +18,83 @@ Le ore complessive dello stage possono essere considerate suddivise in 3 periodi
 	\item periodo di sviluppo della durata di circa 120 ore;
 	\item peridio di convalidazione finale della durata di circa 40 ore.
 \end{itemize}
-
 Nelle sezioni qui di seguito verranno elencate e spiegate le nozioni apprese nel periodo di studio.\\
 Per chiarezza sono state suddivise in principali e secondarie, non per dare meno importanza ad alcuni argomenti studiati ma per suddividerli in funzione dello sviluppo del progetto. Infatti le prime mi sono maggiormente servite per poter sviluppare le maschere, mentre le seconde mi sono servite per conoscenza generale e migliore collaborazione con i colleghi addetti al reparto back end.
 
 %**************************************************************
 \section{Nozioni principali}
 
-Le nozioni principali da apprendere legate a questo progetto furono:
-\begin{itemize}
-	\item Javascript;
-	\item Vue.js;
-\end{itemize}
+\subsection{Javascript}
 
+Javascript è un linguaggio di programmazione orientato agli oggetti e agli eventi comunemente utilizzato per la programmazione Web lato client. La sua enorme diffusione è dovuta al fiorire di numerose librerie nate per semplificare la programmazione sul browser. DA FINIRE
+
+\subsection{Vue.js}
+
+Vue.js è un framework javascript open-source per la configurazione di interfacce utente e single-page application. Questo framework presenta un'architettura adottabile in modo incrementale che si concentra sulla composizione dei componenti, inoltre sono presenti funzionalità avanzate offerte tramite librerie e pacchetti di supporto.\\
+\textit{Questo framework verrà spiegato nel dettaglio nel capitolo riguardante la Progettazione e codifica}
 
 %**************************************************************
 \section{Nozioni secondarie}
 
-Le nozioni secondarie da apprendere legate a questo progetto furono:
+\subsection{Java}
+
+Java è un linguaggio di programmazione ad alto livello, orientato agli oggetti e a tipizzazione statica che si appoggia sull'omonima piattaforma software di esecuzione. DA FINIRE
+
+\subsection{Concetti web}
+
+Riguardo a questo argomento sono stati ripassati in dettaglio due argomenti: il concetto di Servlet e il concetto di REST.
+
+\subsubsection{Servlet}
+
+Una Servlet è un oggetto scritto in linguaggio Java in grado di gestire le richieste generate da uno o più client attraverso scambi di messaggi tra il server ed i client stessi. La servlet può utilizzare le Java API per implementare le diverse funzionalità e le specifiche servlet API per mettere a disposizione un'interfaccia standard per gestire le comunicazioni tra il web client e la servlet. E' importante sapere che le servlet non hanno delle GUI.\\
+I vantaggi della Servlet sono:
 \begin{itemize}
-	\item Java;
-	\item Concetti web;
-	\item Spring;
-	\item Blockchain;
-	\item Ethereum;
-	\item NFT.
+	\item \textit{efficienza}: la Servlet viene istanziata e caricata una sola volta, alla prima invocazione, mentre le chiamate successive sono gestite chiamando nuovi thread;
+	\item \textit{portabilità}: le servlet possono essere facilmente programmate e "portate" in diverse piattaforme;
+	\item \textit{persistenza}: dopo essere stata caricata in memoria la servlet rimane anche nelle successive richieste;
+	\item \textit{gestione delle sessioni}: grazie alle servlet si riesce a superare la limitazione dei protocolli HTTP senza stati.
+\end{itemize}
+
+\subsubsection{REST}
+
+REST è un insieme di principi architetturali per la progettazione che rendono il Web adatto a realizzare Web Service. I principi sono:
+\begin{itemize}
+	\item \textit{identificazione delle risorse}: per risorsa si intende qualsiasi elemento in oggetto di elaborazione, ovvero qualsiasi oggetto su cui è possibile effettuare operazioni. Ciascuna risorsa deve essere identificata univocamente, il meccanismo più naturale è il concetto di URI;
+	\item \textit{uso esplicito dei metodi HTTP}: serve un meccanismo per indicare le operazioni che si possono fare sulle risorse, per questo motivo si sfruttano i metodi predefiniti del protocollo HTTP;
+	\item \textit{risorse autodescrittive}: è opportuno usare i formati più standard possibili per semplificare l'interazione con il client. Il tipo di rappresentazione è indicato nella risposta HTTP;
+	\item \textit{collegamenti tra risorse}: le risorse devono essere messe tra di loro in relazione tramite link ipertestuali, è un principio detto HATEOAS
+	\item \textit{comunicazione senza stato}: è un principio secondo il quale una richiesta non ha alcuna relazione con le richieste precedenti e successive.
+\end{itemize}
+
+\subsection{Spring}
+
+Il framework Spring è una piattafroma Java che fornisce un'infrastruttura di supporto per sviluppatori in Java in modo tale che loro si occupino dalla parte dell'applicazione. I benefici di Spring sono:
+\begin{itemize}
+	\item dipendenze esplicite ed evidenti grazie alla Dependency Injection;
+	\item i contenitori legati all'Inversion of Control tendono ad essere leggeri;
+	\item non reinventa nulla, prende quello che è già esistente e lo rende disponibile;
+	\item è organizzato in modo modulare quindi il programmatore si preoccupa del pacchetto che gli interessa;
+	\item è un model view controller framework ben formato;
+	\item fornisce un'interfaccia di gestione delle transizioni.
+\end{itemize}
+
+\subsection{Blockchain}
+
+La Blockchain è una tecnologia che sfrutta le caratteristiche di una rete informatica di nodi e consente di gestire ed aggiornare, in modo univoco e sicuro, un registro contenente dati ed informazioni in maniera aperta, condivisa e distribuita senza la necessità di un'entità centrale di controllo e verifica. Le applicazioni della blockchain sono contraddistinte dalla necessità di decentralizzazione e disintermediazione in modo da evitare banche, istituzioni finanziare e così via.\\
+Queste tecnologia abilita l'Internet of Value e si basa su un registro distribuito, sistema in cui i nodi di una rete possiedono la medesima copia di un database che modificano e leggono i dati indipendentemente dagli altri nodi. Il registro di queste tecnologie è strutturato come una catena di blocchi contenenti le transazioni ed il consenso è distribuito su tutti i nodi della rete, in questo modo i nodi possono partecipare al processo di validazione delle transazioni da includere nel registro.
+
+\subsection{Ethereum}
+
+Ethereum è una piattaforma digitale che permette di costruire una gamma di applicazioni decentralizzate. Queste applicazioni possono includere programmi di sicurezza, sistemi elettorali e metodi di pagamento. Questa piattaforma opera fuori dal mandato delle autorità centrali ed è per questo motivo che opera nel mercato delle criptovalute.\\
+Ethereum funziona come piattaforma software basata sulla tecnologia blockchain, simile a quella dei bitcoin perchè conserva le transazioni, ed inoltre permette ai programmatori di costruire applicazioni decentralizzate. Queste applicazioni sono software open source che utilizzano la blockchain e gli smart contract e non hanno bisogno di mediatori. 
+
+\subsection{NFT}
+
+NFT, acronimo per Non Fungible Token, si tratta di token insostituibili che rappresentano la proprietà di un bene, come un'opera d'arte digitale o reale. Un token è un oggetto con un valore particolare e simbolico, in particolare un token sulla blockchain è un'informazione digitale registrata su un registro distribuito. Questa informazione è associata ad un utente specifico e rappresenta un certo tipo di diritto, come proprietà di un oggetto o la ricezione di un pagamento. Gli NFT sono diversi dagli altri token perchè sono insostituibili, unici, indivisibili ed è questo il motivo per cui si prestano alla cessione dei diritti di proprietà di opere d'arte.\\
+Quando una persona compra un NFT si deve capire che:
+\begin{itemize}
+	\item non ha comprato l'opera: fisicamente essa rimane sempre in possesso dell'autore;
+	\item non ha comprato i diritti d'autore: non ha diritto a riprodurla, basare altre opere su di essa oppure utilizzarla come se l'avesse creata;
+	\item non ha comprato l'esclusività della riproduzione o dell'uso.
 \end{itemize}
 
