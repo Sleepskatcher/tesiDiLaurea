@@ -102,8 +102,12 @@ Per riassumere i vantaggi offerti da Spring Boot sono:
 Spring Data è un progetto ad alto livello di Spring con lo scopo di unificare e facilitare l'accesso a diversi livelli di archiviazione, ovvero database sia relazionali che non relazionali. Spring Data fornisce interfacce generiche per gli aspetti legati a \textit{Crud Repository} e \textit{Paging And Sorting Repository} per ottenere implementazioni specifiche dall'archivio di persistenza. Grazie alle repository basterà scrivere l'interfaccia con i metodi di ricerca definiti in base ad un determinato insieme di convenzioni che possono variare in base al tipo di archiviazione in uso. Sarà Spring  a fornire un'implementazione appropriata di tale interfaccia in fase di esecuzione.
 
 \subsubsection{Spring Data JPA}
+Spring Data JPA aiuta ad implementare facilmente sistemi basati su archiviazione di tipo JPA, framework per il linguaggio di programmazione Java che gestisce la persistenza dei dati in un database relazionale che usano le Java Platform, Standard Edition e Java Enterprise Edition. Questo modulo infatti si occupa del supporto per i livelli di accesso ai dati basati su JPA e rende più semplice la creazione di applicazioni basate su Spring che utilizzano tecnologie di accesso ai dati.\\
+Per molto tempo implementare un livello di accesso ai dati è risultato complicato: era necessario scrivere molto codice per eseguire query semplici, impaginazione e controllo dei dati. Spring Data JPA mira a ridurre lo sforzo all'importo effettivamente necessario. Lo sviluppatore scriverà le interfacce del repository, inclusi i metodi personalizzati, e sarà Spring a fornire l'implementazione automaticamente.
 
 \subsubsection{Spring Data REST}
+Spring Data REST semplifica la creazione di servizi Web REST basati su repository di Spring Data analizzando il modello di dominio dell'applicazione ed espone le risorse HTTP basate su \textit{hypermedia} per gli aggregati contenuti nel modello.\\
+Spring Data REST definisce automaticamente gli \textit{endpoint} di aggiunta, visualizzazione, rimozione e modifica. Così facendo viene eliminato molto del lavoro manuale solitamente associato a queste attività e rende semplice l'implementazione delle funzionalità \gls{CRUDg}$_G$.  
 
 \subsection{Blockchain}
 
