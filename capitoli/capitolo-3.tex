@@ -79,7 +79,7 @@ Il framework Spring è una piattafroma Java che fornisce un'infrastruttura di su
 	\item è un model view controller framework ben formato;
 	\item fornisce un'interfaccia di gestione delle transizioni.
 \end{itemize}
-Di questo framework in particolare ho studiato: Spring Boot, Spring DataRest e Spring Data/JPA. Nelle sezioni successive verranno spiegati questi concetti.
+Di questo framework in particolare ho studiato: Spring Boot, Spring Data, Spring Data JPA e Spring Data REST. Nelle sezioni successive verranno spiegati questi concetti.
 
 \subsubsection{Spring Boot}
 
@@ -89,11 +89,21 @@ Spring Boot è un progetto Spring che ha lo scopo di rendere più semplice lo sv
 	\item configurazione automatica di bean e componenti e delle loro relazioni;
 	\item \textit{actuator}, per ispezionare un applicazione in esecuzione.
 \end{itemize} 
-Quindi DA FINIRE
+Spring Boot quindi semplifica la gestione delle dipendenze fornendo e supportando una serie di dipendenze dette \textit{starter}, ovvero dipendenze la cui inclusione implica l'inclusione automatica delle loro dipendenze transitive. La classe detta \textit{Spring Boot Application} esegue l'avvio dell'applicazione etichettando la classe di configurazione, abilitando la scansione e l'identificazione automatica dei componenti, ed infine creando i componenti mancanti necessari alla configurazione dell'applicazione.\\
+Per riassumere i vantaggi offerti da Spring Boot sono:
+\begin{itemize}
+	\item possibilità di incorporare applicazioni web server per cui non è necessario l'uso di file WAR, acronimo di \textit{Web Application Archive};
+	\item configurazione Maven semplificata;
+	\item configurazione automatica se possibile;
+	\item fornitura di caratteristiche non funzionali come metriche o configurazioni esternalizzate.
+\end{itemize}
 
-\subsubsection{Spring Data Rest}
+\subsubsection{Spring Data}
+Spring Data è un progetto ad alto livello di Spring con lo scopo di unificare e facilitare l'accesso a diversi livelli di archiviazione, ovvero database sia relazionali che non relazionali. Spring Data fornisce interfacce generiche per gli aspetti legati a \textit{Crud Repository} e \textit{Paging And Sorting Repository} per ottenere implementazioni specifiche dall'archivio di persistenza. Grazie alle repository basterà scrivere l'interfaccia con i metodi di ricerca definiti in base ad un determinato insieme di convenzioni che possono variare in base al tipo di archiviazione in uso. Sarà Spring  a fornire un'implementazione appropriata di tale interfaccia in fase di esecuzione.
 
-\subsubsection{Spring Data/JPA}
+\subsubsection{Spring Data JPA}
+
+\subsubsection{Spring Data REST}
 
 \subsection{Blockchain}
 
