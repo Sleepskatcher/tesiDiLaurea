@@ -50,6 +50,8 @@ I prodotti più noti dell'azienda sono i seguenti:
 Il progetto da svolgere proposto dall'azienda per lo stage è una web application chiamata NFTLab legata all'ambito blockchain e \gls{NFTg}, due argomenti che rendono contemporaneo ed interessante il progetto di stage.\\
 In particolare l'utente potrà visualizzare le opere multimediali in vendita, fare l'accesso o la registrazione al sito. Dopo essere acceduto, l'utente potrà caricare le proprie opere e decidere se metterle in vendita o meno. Nella pagina del profilo personale sarà possibile per l'utente modificare i propri dati personali o i dati delle opere caricate. Oltre a queste azioni l'utente potrà sfogliare il catalogo delle opere presenti e decidere di comprarne a sua volta.\\
 Essendo un progetto legato al concetto di blockchain e \gls{NFT} le azioni di compravendita verranno effettuate tramite lo scambio di una moneta virtuale detta Ethereum. Un utente nel momento in cui carica un'opera diventa l'autore ed il proprietario di quest'ultima, ma dopo la vendita l'acquirente diventerà il nuovo proprietario e solo l'utente che ha caricato l'opera sarà l'autore.\\
+(PER SALVARE FILE LO SI SALVA TRAMITE HASH NELLA BLOCKCHAIN, UTENTE VIENE IDENTIFICATO TRAMITE L'INDIRIZZO WALET)
+Il file unico caricato dall'utente verrà salvato nella blockchain tramite hash e l'utente verrà identificato tramite il proprio indirizzo del wallet con cui acquisterà o caricherà l'opera.
 Per realizzare questi aspetti sono state implementate diverse maschere, ovvero interfacce utente, tramite il framework Vue.js, uno strumento utile allo sviluppo di web application reattive e a pagina singola.\\
 Parte del percorso di stage è stata riservata ad un periodo di studio delle tecnologie utili allo sviluppo delle maschere e legate al back end, in particolare è stato studiato il framework Spring. FRASE CHE NON MI PIACE
 
@@ -82,7 +84,7 @@ Gli incontri legati a questo modello di sviluppo che vengono svolti di solito so
 La situazione di emergenza sanitaria ancora non conclusa mi ha portato a vivere un'esperienza lavorativa diversa dai colleghi degli anni precedenti, infatti ha fatto sì che lo stage fosse organizzato in modalità mista: in parte da remoto ed in parte in azienda (di solito uno o due giorni alla settimana). A causa di ciò non ho potuto vivere appieno questo modello di sviluppo vista l'impossibilità di essere sempre presente in azienda. Per questo motivo il giorno concordato con i colleghi stagisti ed il tutor aziendale per andare in azienda è stato sfruttato per fare un daily scrum alternativo data la sua cadenza settimanale.\\ 
 Nonostante l'emergenza sanitaria ancora in corso ho potuto comunque constatare l’efficacia e la funzionalità di questo modello di sviluppo, soprattutto per un progetto software in evoluzione quale è stato quello a cui ho lavorato.\\
 
-\subsection{Organizzazione del lavoro}
+\subsection{Strumenti per l'organizzazione e la comunicazione}
 
 \subsubsection{Trello}
 
@@ -117,5 +119,42 @@ Oltre a tenere traccia delle attività tramite Trello, l'azienda ha deciso di fa
 %**************************************************************
 
 \subsubsection{Discord}
-
 Per comunicare con l'intero gruppo di stagisti l'azienda ha proposto di utilizzare Discord, una piattaforma messaggistica dove noi stagisti potevamo comunicare sia con il personale aziendale che singolarmente con il proprio tutor per consigli, delucidazioni o motivi organizzativi. DA FINIRE
+
+\subsubsection{Notion}
+Notion è un'applicazione che fornisce elementi come note, database, bacheche kanban, wiki, calendari e promemoria. L'utente può collegare questi elementi tra di loro per creare il proprio sistema per la gestione della presa di appunti, la conoscenza, la gestione dei dati e la gestione dei progetti. Questo può essere un sistema da utilizzare da soli oppure in collaborazione. DA FINIRE
+
+\section{Requisiti ed obiettivi}
+
+\subsection{Notazione}
+
+\subsection{Obiettivi fissati}
+
+\section{Pianificazione del lavoro}
+Come definito dal piano di lavoro, lo stage è composto da un primo periodo di studio ed approfondimento teorico dei concetti e delle tecnologie ed un secondo momento di implementazione e sviluppo. La ripartizione oraria è così definita:
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.6}
+	\begin{tabularx}{\textwidth}{lX}
+		\hline
+		\textbf{Durata in ore} & \textbf{Descrizione dell'attività}\\
+		\hline
+		40 & Presentazione dell'ambiente di sviluppo, analisi del progetto da svolgere, verifica delle credenziali assegnate e ripasso del linguaggio Java e dei concetti Web\\
+		\hline
+		40 & Studio dei principi generali di Spring Core (IOC e Dependency Injection), Spring Boot e Spring Data REST \\
+		\hline
+		40 & Studio di Spring Data JPA e studio dei concetti generali di Blockchain, Ethereum, NFT\\
+		\hline
+		40 & Ripasso del linguaggio di Javascript e studio del framework Vue.js\\
+		\hline
+		40 & Analisi e studio del progetto NFTLab, progettazione ed implementazione della nuova maschera di login\\
+		\hline
+		40 & Progettazione ed implementazione della nuova maschera "Upload Opera", scrittura dei service su front end di chiamata al back end ed implementazione della maschera "Gestione Opere dell'utente"\\
+		\hline
+		40 & Termine delle implementazioni ed integrazione con l'applicativo\\
+		\hline
+		40 & Termine delle integrazioni e collaudo finale\\
+		\hline
+	\end{tabularx}
+	\label{tab:pianificazione-del-lavoro}
+\caption{Tabella della pianificazione del lavoro}
+\end{table}%
