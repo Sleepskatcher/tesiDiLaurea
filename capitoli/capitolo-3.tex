@@ -28,13 +28,20 @@ Per chiarezza sono state suddivise in principali e secondarie, non per dare meno
 
 Javascript è un linguaggio di programmazione orientato agli oggetti e agli eventi comunemente utilizzato per la programmazione Web lato client. La sua enorme diffusione è dovuta al gran numero di librerie nate per semplificare la programmazione sul browser, dalla nascita di \gls{frameworkg} lato server e il mondo mobile che lo supporta come linguaggio principale.\\
 La caratteristica principale di Javascript è quella di essere il linguaggio di scripting per eccellenza e questo comporta una serie di vantaggi e svantaggi secondo l'uso che se ne deve fare e considerando il rapporto che si instaura nel meccanismo client-server. Il server invia al client i dati che possono arrivare in due diversi formati (testo e binario), ma il client sa comprendere solo il formato binario, per cui se arrivano dati in quel formato diventeranno immediatamente eseguibili altrimenti il client dovrà interpretare i dati.\\
-Sono presenti numerosi vantaggi e svantaggi tra il linguaggi di scripting e linguaggi compilati e sono i seguenti:
+Sono presenti numerosi vantaggi e svantaggi di questo linguaggio, più importanti da sapere sono i seguenti:
 \begin{itemize}
-	\item il linguaggio di scripting è più sicuro ed affidabile
-	\item
-	\item
-	\item
-	\item
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Velocità: è un linguaggio veloce siccome ogni funzione può essere avviata immediatamente invece di dover contattare il server ed aspettare una sua risposta;
+		\item Semplicità: è un linguaggio relativamente semplice da imparare ed implementare;
+		\item Versatilità: è un linguaggio che lavora bene con altri linguaggi e può essere usato in una grande varietà di applicazioni, infatti può essere inserito in una pagina web indipendentemente dall'estensione del file e può essere utilizzato all'interno di script scritti in altri linguaggi;
+		\item Carico del server: essendo Javascript un linguaggio lato client questo fa ridurre le domande al server del sito web.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Sicurezza: visto che il codice si esegue nel computer dell'utente può essere sfruttato per scopi dannosi;
+		\item Affidamento all'utente finale: gli script lato server producono sempre lo stesso risultato ma gli script lato client possono risultare imprevedibili perché possono essere interpretati in maniera differente in base al browser utilizzato. Questo difetto però può essere mitigato provando il proprio codice sui browser più utilizzati dagli utenti.
+	\end{itemize}
 \end{itemize}
 
 \subsection{Vue.js}
