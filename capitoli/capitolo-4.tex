@@ -13,10 +13,11 @@
 
 Per lo studio dei casi d'uso del prodotto creato sono stati creati dei diagrammi.
 Questi diagrammi, detti appunto dei casi d'uso (in inglese \emph{Use Case Diagram}), sono diagrammi di tipo \gls{uml} dedicati alla descrizione del sistema e delle funzioni o servizi offerti da un esso, e come gli utilizzatori interagiscono con esso.\\
-Lo strumento utilizzato per la realizzazione di tali diagrammi è StarUML.
+Lo strumento utilizzato per la realizzazione di tali diagrammi è StarUML, uno dei software più noti per la creazione di vari tipi di diagrammi utili alla progettazione architetturale di un prodotto software.
 
 \subsection{Attori dei casi d'uso}
-I possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
+Dopo un'attenta analisi ho concluso che per le funzionalità offerte sono presenti unicamente attori primari, in quanto non ci sono collegamenti con alcun framework o libreria esterna.
+Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
 \begin{itemize}
 	\item utente non autenticato
 	\item utente autenticato
@@ -27,15 +28,20 @@ I possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
 	\caption{Attori dei casi d'uso}
 \end{figure}
 
-\begin{usecase}{1}{Registrazione}
+\begin{usecase}{1}{Registrazione}\\
+	\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.9\columnwidth]{usecase/UC1.1} 
+		\caption{U.C1.1 Inserimento dei dati per la registrazione}
+	\end{figure}
 \usecaseactors{Utente non autenticato}
 \usecasepre{L'utente non è ancora presente nei registri del sistema}
-\usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di registrazione. L'utente inserisce i dati necessari e li conferma e questo porta l'utente a possedere un account nel sistema}
-\usecasepost{L'utente risulta presente nei registri del sistema e gli è possibile autenticarsi nella piattaforma}
+\usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di registrazione. L'utente inserisce i dati necessari e li conferma, questo porta l'utente a possedere un account nel sistema}
+\usecasepost{L'utente risulta presente nei registri del sistema ed è autenticato nella piattaforma}
 \end{usecase}
 
 \begin{usecase}{1.1}{Inserimento dei dati per la registrazione}
-	\begin{figure}[H] 
+		\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.9\columnwidth]{usecase/UC1.1} 
 		\caption{U.C1.1 Inserimento dei dati per la registrazione}
@@ -50,7 +56,7 @@ I possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
 	\item Inserimento della password (U.C1.1.4)
 	\item Inserimento della conferma della password (U.C1.1.5)
 	\item Inserimento dell'anno di nascita (U.C1.1.6)
-	\item Inserimento dell'ID del Wallet (U.C.1.1.7)
+	\item Inserimento del Wallet Address (U.C.1.1.7)
 \end{itemize}
 DA SISTEMARE PER IL PUNTO SCEMO}
 \usecasepost{L'utente ha completato la compilazione dei campi e può procedere con la registrazione}
@@ -98,38 +104,30 @@ DA SISTEMARE PER IL PUNTO SCEMO}
 \usecasepost{L'utente ha inserito l'anno di nascita}
 \end{usecase}
 
-\begin{usecase}{1.1.7}{Inserimento dell'ID Wallet}
+\begin{usecase}{1.1.7}{Inserimento del Wallet Address}
 \usecaseactors{Utente non autenticato}
 \usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce l'ID Wallet}
-\usecasepost{L'utente ha inserito l'ID Wallet}
+\usecasedesc{L'utente non autenticato inserisce il Wallet Address}
+\usecasepost{L'utente ha inserito il Wallet Address}
 \end{usecase}
 
 \begin{usecase}{2}{Login}
 \usecaseactors{Utente non autenticato}
-\usecasepre{}
-\usecasedesc{}
-\usecasepost{}
+\usecasepre{L'utente non è autenticato ma è presente nei registri di sistema}
+\usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di login. L'utente inserisce i dati necessari e li conferma, questo porta l'utente ad autenticarsi nel sistema.}
+\usecasepost{L'utente risulta autenticato nella piattaforma}
 \end{usecase}
 
 \begin{usecase}{2.1}{Inserimento dei dati per il login}
+	\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.9\columnwidth]{usecase/UC2.1} 
+		\caption{U.C1.1 Inserimento dei dati per la registrazione}
+	\end{figure}
 \usecaseactors{Utente non autenticato}
 \usecasepre{}
 \usecasedesc{}
 \usecasepost{}
-\end{usecase}
-
-\begin{usecase}{0}{Scenario principale}
-	\begin{figure}[H] 
-		\centering 
-		\includegraphics[width=0.9\columnwidth]{usecase/scenario-principale} 
-		\caption{Use Case - UC0: Scenario principale}
-	\end{figure}
-\usecaseactors{Sviluppatore applicativi}
-\usecasepre{Lo sviluppatore è entrato nel plug-in di simulazione all'interno dell'IDE}
-\usecasedesc{La finestra di simulazione mette a disposizione i comandi per configurare, registrare o eseguire un test}
-\usecasepost{Il sistema è pronto per permettere una nuova interazione}
-\label{uc:scenario-principale}
 \end{usecase}
 
 \section{Tracciamento dei requisiti}
@@ -164,7 +162,9 @@ Nelle sezioni seguenti sono riassunti i requisiti ed il loro tracciamento con i 
 \hline\hline
 \textbf{Requisito} & \textbf{Descrizione} & \textbf{Use Case}\\
 \hline
-RFN-1     & L'interfaccia permette di configurare il tipo di sonde del test & UC1 \\
+RFO1 & L'interfaccia permette di effettuare la registrazione al sito & UC1 \\
+\hline
+RFO2 & L'interfaccia permette di effettuare il login al sito & UC2 \\
 \hline
 \end{tabularx}
 \end{table}%
