@@ -19,8 +19,8 @@ Lo strumento utilizzato per la realizzazione di tali diagrammi è StarUML, uno d
 Dopo un'attenta analisi ho concluso che per le funzionalità offerte sono presenti unicamente attori primari, in quanto non ci sono collegamenti con alcun framework o libreria esterna.
 Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
 \begin{itemize}
-	\item utente non autenticato
-	\item utente autenticato
+	\item \textbf{utente non autenticato}: indica che l'utente non ha ancora effettuato l'autenticazione o la registrazione all'interno della web application;
+	\item \textbf{utente autenticato}: indica che l'utente ha effettuato l'autenticazione all'interno della web application e comporta che può accedere a diverse funzionalità che sarebbero altrimenti inaccessibili.
 \end{itemize}
 \begin{figure}[H] 
 	\centering 
@@ -47,18 +47,18 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 		\caption{U.C1.1 Inserimento dei dati per la registrazione}
 	\end{figure}
 \usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non autenticato si trova nella pagina di navigazione}
+\usecasepre{L'utente non autenticato si trova nella pagina di registrazione}
 \usecasedesc{L'utente non autenticato compila i campi nel seguente modo:
 \begin{itemize}
-	\item Inserimento del nome (U.C1.1.1)
-	\item Inserimento del cognome (U.C1.1.2)
-	\item Inserimento dell'email (U.C1.1.3)
-	\item Inserimento della password (U.C1.1.4)
-	\item Inserimento della conferma della password (U.C1.1.5)
-	\item Inserimento dell'anno di nascita (U.C1.1.6)
+	\item Inserimento del nome (U.C.1.1.1)
+	\item Inserimento del cognome (U.C.1.1.2)
+	\item Inserimento dell'email (U.C.1.1.3)
+	\item Inserimento della password (U.C.1.1.4)
+	\item Inserimento della conferma della password (U.C.1.1.5)
+	\item Inserimento dell'anno di nascita (U.C.1.1.6)
 	\item Inserimento del Wallet Address (U.C.1.1.7)
 \end{itemize}
-DA SISTEMARE PER IL PUNTO SCEMO}
+}
 \usecasepost{L'utente ha completato la compilazione dei campi e può procedere con la registrazione}
 \end{usecase}
 
@@ -114,7 +114,7 @@ DA SISTEMARE PER IL PUNTO SCEMO}
 \begin{usecase}{2}{Login}
 \usecaseactors{Utente non autenticato}
 \usecasepre{L'utente non è autenticato ma è presente nei registri di sistema}
-\usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di login. L'utente inserisce i dati necessari e li conferma, questo porta l'utente ad autenticarsi nel sistema.}
+\usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di login. L'utente inserisce i dati necessari (U.C.2.1) e li conferma, questo porta l'utente ad autenticarsi nel sistema.}
 \usecasepost{L'utente risulta autenticato nella piattaforma}
 \end{usecase}
 
@@ -125,9 +125,28 @@ DA SISTEMARE PER IL PUNTO SCEMO}
 		\caption{U.C1.1 Inserimento dei dati per la registrazione}
 	\end{figure}
 \usecaseactors{Utente non autenticato}
-\usecasepre{}
-\usecasedesc{}
-\usecasepost{}
+\usecasepre{L'utente non autenticato si trova nella pagina di login}
+\usecasedesc{L'utente non autenticato compila i campi nel seguente modo:
+\begin{itemize}
+	\item Inserimento della email (U.C.2.1.1)
+	\item Inserimento della password (U.C.2.1.2)
+\end{itemize}
+}
+\usecasepost{L'utente è autenticato come utente autenticato all'interno della web application}
+\end{usecase}
+
+\begin{usecase}{2.1.1}{Inserimento della email}
+\usecaseactors{Utente non autenticato}
+\usecasepre{L'utente non autenticato si trova nella pagina di login e possiede le credenziali di accesso}
+\usecasedesc{L'utente, per procedere con l'autenticazione inserisce l'email}
+\usecasepost{L'utente ha inserito l'email}
+\end{usecase}
+
+\begin{usecase}{2.1.2}{Inserimento della password}
+	\usecaseactors{Utente non autenticato}
+	\usecasepre{L'utente non autenticato si trova nella pagina di login e possiede le credenziali di accesso}
+	\usecasedesc{L'utente, per procedere con l'autenticazione inserisce la password}
+	\usecasepost{L'utente ha inserito la password}
 \end{usecase}
 
 \section{Tracciamento dei requisiti}
@@ -155,21 +174,43 @@ La descrizione del codice è la seguente:
 
 Nelle sezioni seguenti sono riassunti i requisiti ed il loro tracciamento con i casi d'uso delineati in fase di analisi.
 
-\begin{table}%
+\begin{table}[H]
 \caption{Tabella del tracciamento dei requisti funzionali}
 \label{tab:requisiti-funzionali}
 \begin{tabularx}{\textwidth}{lXl}
 \hline\hline
 \textbf{Requisito} & \textbf{Descrizione} & \textbf{Use Case}\\
 \hline
-RFO1 & L'interfaccia permette di effettuare la registrazione al sito & UC1 \\
+RFO1 & L'utente non autenticato può effettuare la registrazione al sito & UC1 \\
 \hline
-RFO2 & L'interfaccia permette di effettuare il login al sito & UC2 \\
+RFO1.1 & L'utente non autenticato inserisce i dati per la registrazione & UC1.1 \\
+\hline
+RFO1.1.1 & L'utente non autenticato inserisce il nome & UC1.1.1 \\
+\hline
+RFO1.1.2 & L'utente non autenticato inserisce il cognome & UC1.1.2 \\
+\hline
+RFO1.1.3 & L'utente non autenticato inserisce l'email & UC1.1.3 \\
+\hline
+RFO1.1.4 & L'utente non autenticato inserisce la password & UC1.1.4 \\
+\hline
+RFO1.1.5 & L'utente non autenticato inserisce la conferma della password & UC1.1.5 \\
+\hline
+RFO1.1.6 & L'utente non autenticato inserisce l'anno di nascita & UC1.1.6 \\
+\hline
+RFO1.1.7 & L'utente non autenticato inserisce il Wallett Address & UC1.1.7 \\
+\hline
+RFO2 & L'utente non autenticato può effettuare il login al sito & UC2 \\
+\hline
+RFO2.1 &L'utente non autenticato inserisce i dati per il login & UC1.1.6 \\
+\hline
+RFO2.1.1 & L'utente non autenticato inserisce l'email & UC1.1.7 \\
+\hline
+RFO2.1.2 & L'utente non autenticato inserisce  la password & UC1.1.7 \\
 \hline
 \end{tabularx}
 \end{table}%
 
-\begin{table}%
+\begin{table}[H]
 \caption{Tabella del tracciamento dei requisiti qualitativi}
 \label{tab:requisiti-qualitativi}
 \begin{tabularx}{\textwidth}{lXl}
@@ -181,7 +222,7 @@ RQD-1    & Le prestazioni del simulatore hardware deve garantire la giusta esecu
 \end{tabularx}
 \end{table}%
 
-\begin{table}%
+\begin{table}[H]
 \caption{Tabella del tracciamento dei requisiti di vincolo}
 \label{tab:requisiti-vincolo}
 \begin{tabularx}{\textwidth}{lXl}
