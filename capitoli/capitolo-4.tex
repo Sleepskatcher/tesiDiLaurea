@@ -16,17 +16,17 @@ Questi diagrammi, detti appunto dei casi d'uso (in inglese \emph{Use Case Diagra
 Lo strumento utilizzato per la realizzazione di tali diagrammi è StarUML, uno dei software più noti per la creazione di vari tipi di diagrammi utili alla progettazione architetturale di un prodotto software.
 
 \subsection{Attori dei casi d'uso}
+\begin{figure}[H] 
+	\centering 
+	\includegraphics[width=0.7\columnwidth]{usecase/attori} 
+	\caption{Attori dei casi d'uso}
+\end{figure}
 Dopo un'attenta analisi ho concluso che per le funzionalità offerte sono presenti unicamente attori primari, in quanto non ci sono collegamenti con alcun framework o libreria esterna.
 Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
 \begin{itemize}
 	\item \textbf{utente non autenticato}: indica che l'utente non ha ancora effettuato l'autenticazione o la registrazione all'interno della web application;
 	\item \textbf{utente autenticato}: indica che l'utente ha effettuato l'autenticazione all'interno della web application e comporta che può accedere a diverse funzionalità che sarebbero altrimenti inaccessibili.
 \end{itemize}
-\begin{figure}[H] 
-	\centering 
-	\includegraphics[width=0.9\columnwidth]{usecase/attori} 
-	\caption{Attori dei casi d'uso}
-\end{figure}
 
 \begin{usecase}{1}{Registrazione}\\
 	\begin{figure}[H] 
@@ -67,6 +67,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasepre{L'utente non è autenticato e non ha compilato questo campo}
 \usecasedesc{L'utente non autenticato inserisce il proprio nome}
 \usecasepost{L'utente ha inserito il nome}
+\usecaseest{L'utente non inserisce nulla e appare il messaggio di errore}
 \end{usecase}
 
 \begin{usecase}{1.1.2}{Inserimento del cognome}
@@ -179,7 +180,7 @@ Nelle sezioni seguenti sono riassunti i requisiti ed il loro tracciamento con i 
 \label{tab:requisiti-funzionali}
 \begin{tabularx}{\textwidth}{lXl}
 \hline\hline
-\textbf{Requisito} & \textbf{Descrizione} & \textbf{Use Case}\\
+\textbf{Requisito} & \textbf{Descrizione} & \textbf{Caso d'uso}\\
 \hline
 RFO1 & L'utente non autenticato può effettuare la registrazione al sito & UC1 \\
 \hline
@@ -189,7 +190,9 @@ RFO1.1.1 & L'utente non autenticato inserisce il nome & UC1.1.1 \\
 \hline
 RFO1.1.2 & L'utente non autenticato inserisce il cognome & UC1.1.2 \\
 \hline
-RFO1.1.3 & L'utente non autenticato inserisce l'email & UC1.1.3 \\
+RFO1.1.3 & L'utente non autenticato inserisce l'ema
+
+il & UC1.1.3 \\
 \hline
 RFO1.1.4 & L'utente non autenticato inserisce la password & UC1.1.4 \\
 \hline
@@ -201,11 +204,11 @@ RFO1.1.7 & L'utente non autenticato inserisce il Wallett Address & UC1.1.7 \\
 \hline
 RFO2 & L'utente non autenticato può effettuare il login al sito & UC2 \\
 \hline
-RFO2.1 &L'utente non autenticato inserisce i dati per il login & UC1.1.6 \\
+RFO2.1 &L'utente non autenticato inserisce i dati per il login & UC2.1 \\
 \hline
-RFO2.1.1 & L'utente non autenticato inserisce l'email & UC1.1.7 \\
+RFO2.1.1 & L'utente non autenticato inserisce l'email & UC2.1.1 \\
 \hline
-RFO2.1.2 & L'utente non autenticato inserisce  la password & UC1.1.7 \\
+RFO2.1.2 & L'utente non autenticato inserisce  la password & UC2.1.2 \\
 \hline
 \end{tabularx}
 \end{table}%
