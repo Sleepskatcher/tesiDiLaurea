@@ -34,120 +34,181 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 		\includegraphics[width=0.9\columnwidth]{usecase/UC1.1} 
 		\caption{U.C1.1 Inserimento dei dati per la registrazione}
 	\end{figure}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è ancora presente nei registri del sistema}
-\usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di registrazione. L'utente inserisce i dati necessari e li conferma, questo porta l'utente a possedere un account nel sistema}
-\usecasepost{L'utente risulta presente nei registri del sistema ed è autenticato nella piattaforma}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è ancora presente nei registri del sistema.}
+\usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di registrazione. L'utente inserisce i dati necessari e li conferma, questo porta l'utente a possedere un account nel sistema.}
+\usecasepost{L'utente risulta presente nei registri del sistema ed è autenticato nella piattaforma.}
 \end{usecase}
 
 \begin{usecase}{1.1}{Inserimento dei dati per la registrazione}
-		\begin{figure}[H] 
-		\centering 
-		\includegraphics[width=0.9\columnwidth]{usecase/UC1.1} 
-		\caption{U.C1.1 Inserimento dei dati per la registrazione}
-	\end{figure}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non autenticato si trova nella pagina di registrazione}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non autenticato si trova nella pagina di registrazione.}
 \usecasedesc{L'utente non autenticato compila i campi nel seguente modo:
 \begin{itemize}
-	\item Inserimento del nome (U.C.1.1.1)
-	\item Inserimento del cognome (U.C.1.1.2)
-	\item Inserimento dell'email (U.C.1.1.3)
-	\item Inserimento della password (U.C.1.1.4)
-	\item Inserimento della conferma della password (U.C.1.1.5)
-	\item Inserimento dell'anno di nascita (U.C.1.1.6)
-	\item Inserimento del Wallet Address (U.C.1.1.7)
+	\item Inserimento del nome (U.C.1.1.1);
+	\item Inserimento del cognome (U.C.1.1.2);
+	\item Inserimento dell'email (U.C.1.1.3);
+	\item Inserimento della password (U.C.1.1.4);
+	\item Inserimento della conferma della password (U.C.1.1.5);
+	\item Inserimento dell'anno di nascita (U.C.1.1.6);
+	\item Inserimento del Wallet Address (U.C.1.1.7).
 \end{itemize}
 }
-\usecasepost{L'utente ha completato la compilazione dei campi e può procedere con la registrazione}
+\usecasepost{L'utente ha completato la compilazione dei campi e può procedere con la registrazione.}
 \end{usecase}
 
 \begin{usecase}{1.1.1}{Inserimento del nome}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce il proprio nome}
-\usecasepost{L'utente ha inserito il nome}
-\usecaseest{L'utente non inserisce nulla e appare il messaggio di errore}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
+\usecasedesc{L'utente non autenticato inserisce il proprio nome.}
+\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+\usecasepost{L'utente ha inserito il nome.}
+\usecaseest{L'utente non inserisce nulla e appare il messaggio di errore.}
 \end{usecase}
 
 \begin{usecase}{1.1.2}{Inserimento del cognome}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce il proprio cognome}
-\usecasepost{L'utente ha inserito il cognome}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
+\usecasedesc{L'utente non autenticato inserisce il proprio cognome.}
+\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+\usecasepost{L'utente ha inserito il cognome.}
 \end{usecase}
 
 \begin{usecase}{1.1.3}{Inserimento dell'email}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce la sua email}
-\usecasepost{L'utente ha inserito l'email}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
+\usecasedesc{L'utente non autenticato inserisce la sua email.}
+\usecaseest{
+	\begin{itemize}
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCEMAILNONVALIDA).
+	\end{itemize}
+}
+\usecasepost{L'utente ha inserito l'email.}
 \end{usecase}
 
 \begin{usecase}{1.1.4}{Inserimento della password}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce la sua password}
-\usecasepost{L'utente ha inserito la password}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
+\usecasedesc{L'utente non autenticato inserisce la sua password.}
+\usecaseest{
+	\begin{itemize}
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
+	\end{itemize}
+}
+\usecasepost{L'utente ha inserito la password.}
 \end{usecase}
 
 \begin{usecase}{1.1.5}{Inserimento della conferma della password}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce la conferma della password}
-\usecasepost{L'utente ha inserito la conferma della password}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
+\usecasedesc{L'utente non autenticato inserisce la conferma della password.}
+\usecaseest{
+	\begin{itemize}
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERRORECONFERMAPASSWORDNONVALIDA).
+	\end{itemize}
+}
+\usecasepost{L'utente ha inserito la conferma della password.}
 \end{usecase}
 
 \begin{usecase}{1.1.6}{Inserimento dell'anno di nascita}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce il proprio anno di nascita}
-\usecasepost{L'utente ha inserito l'anno di nascita}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
+\usecasedesc{L'utente non autenticato inserisce il proprio anno di nascita.}
+\usecasepost{L'utente ha inserito l'anno di nascita.}
 \end{usecase}
 
 \begin{usecase}{1.1.7}{Inserimento del Wallet Address}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato e non ha compilato questo campo}
-\usecasedesc{L'utente non autenticato inserisce il Wallet Address}
-\usecasepost{L'utente ha inserito il Wallet Address}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
+\usecasedesc{L'utente non autenticato inserisce il Wallet Address.}
+\usecasepost{L'utente ha inserito il Wallet Address.}
 \end{usecase}
 
 \begin{usecase}{2}{Login}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non è autenticato ma è presente nei registri di sistema}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non è autenticato ma è presente nei registri di sistema.}
 \usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di login. L'utente inserisce i dati necessari (U.C.2.1) e li conferma, questo porta l'utente ad autenticarsi nel sistema.}
-\usecasepost{L'utente risulta autenticato nella piattaforma}
+\usecaseest{L'utente inserisce i dati ma non è presente nel database quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente i dati (UCERRORENONELDB).}
+\usecasepost{L'utente risulta autenticato nella piattaforma.}
 \end{usecase}
 
 \begin{usecase}{2.1}{Inserimento dei dati per il login}
 	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.9\columnwidth]{usecase/UC2.1} 
-		\caption{U.C1.1 Inserimento dei dati per la registrazione}
+		\caption{U.C1.1 Inserimento dei dati per il login}
 	\end{figure}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non autenticato si trova nella pagina di login}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non autenticato si trova nella pagina di login.}
 \usecasedesc{L'utente non autenticato compila i campi nel seguente modo:
 \begin{itemize}
-	\item Inserimento della email (U.C.2.1.1)
-	\item Inserimento della password (U.C.2.1.2)
+	\item Inserimento della email (U.C.2.1.1);
+	\item Inserimento della password (U.C.2.1.2).
 \end{itemize}
 }
-\usecasepost{L'utente è autenticato come utente autenticato all'interno della web application}
+\usecasepost{L'utente è autenticato come utente autenticato all'interno della web application.}
 \end{usecase}
 
 \begin{usecase}{2.1.1}{Inserimento della email}
-\usecaseactors{Utente non autenticato}
-\usecasepre{L'utente non autenticato si trova nella pagina di login e possiede le credenziali di accesso}
-\usecasedesc{L'utente, per procedere con l'autenticazione inserisce l'email}
-\usecasepost{L'utente ha inserito l'email}
+\usecaseactors{Utente non autenticato.}
+\usecasepre{L'utente non autenticato si trova nella pagina di login e possiede le credenziali di accesso.}
+\usecasedesc{L'utente, per procedere con l'autenticazione inserisce l'email.}
+\usecaseest{
+	\begin{itemize}
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCEMAILNONVALIDA).
+	\end{itemize}
+}
+\usecasepost{L'utente ha inserito l'email.}
 \end{usecase}
 
 \begin{usecase}{2.1.2}{Inserimento della password}
-	\usecaseactors{Utente non autenticato}
-	\usecasepre{L'utente non autenticato si trova nella pagina di login e possiede le credenziali di accesso}
-	\usecasedesc{L'utente, per procedere con l'autenticazione inserisce la password}
-	\usecasepost{L'utente ha inserito la password}
+	\usecaseactors{Utente non autenticato.}
+	\usecasepre{L'utente non autenticato si trova nella pagina di login e possiede le credenziali di accesso.}
+	\usecasedesc{L'utente, per procedere con l'autenticazione inserisce la password.}
+	\usecaseest{
+		\begin{itemize}
+			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
+		\end{itemize}
+	}
+	\usecasepost{L'utente ha inserito la password.}
+\end{usecase}
+
+\begin{usecase}{3}{Visualizzazione lista opere}
+\end{usecase}
+
+\begin{usecase}{3.1}{Inserimento filtro sulla lista opere}
+\end{usecase}
+
+\begin{usecase}{3.2}{Visualizzazione dettaglio opera}
+\end{usecase}
+
+\begin{usecase}{4}{Visualizzazione pagina personale}
+\end{usecase}
+
+\begin{usecase}{4.1}{Modifica dati}
+\end{usecase}
+
+\begin{usecase}{4.2}{Modifica password}
+\end{usecase}
+
+\begin{usecase}{4.3}{Vis. lista opere personali}
+\end{usecase}
+
+\begin{usecase}{4.3.1}{Vis. dettaglio opera}
+\end{usecase}
+
+\begin{usecase}{4.3.2}{Modifica}
+\end{usecase}
+
+\begin{usecase}{4.4}{Upload opera}
+\end{usecase}
+
+\begin{usecase}{5}{Logout}
 \end{usecase}
 
 \section{Tracciamento dei requisiti}
@@ -178,9 +239,10 @@ Nelle sezioni seguenti sono riassunti i requisiti ed il loro tracciamento con i 
 \begin{table}[H]
 \caption{Tabella del tracciamento dei requisti funzionali}
 \label{tab:requisiti-funzionali}
+\renewcommand{\arraystretch}{1.6}
 \begin{tabularx}{\textwidth}{lXl}
 \hline\hline
-\textbf{Requisito} & \textbf{Descrizione} & \textbf{Caso d'uso}\\
+\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
 \hline
 RFO1 & L'utente non autenticato può effettuare la registrazione al sito & UC1 \\
 \hline
@@ -190,9 +252,7 @@ RFO1.1.1 & L'utente non autenticato inserisce il nome & UC1.1.1 \\
 \hline
 RFO1.1.2 & L'utente non autenticato inserisce il cognome & UC1.1.2 \\
 \hline
-RFO1.1.3 & L'utente non autenticato inserisce l'ema
-
-il & UC1.1.3 \\
+RFO1.1.3 & L'utente non autenticato inserisce l'email & UC1.1.3 \\
 \hline
 RFO1.1.4 & L'utente non autenticato inserisce la password & UC1.1.4 \\
 \hline
@@ -216,11 +276,14 @@ RFO2.1.2 & L'utente non autenticato inserisce  la password & UC2.1.2 \\
 \begin{table}[H]
 \caption{Tabella del tracciamento dei requisiti qualitativi}
 \label{tab:requisiti-qualitativi}
+\renewcommand{\arraystretch}{1.6}
 \begin{tabularx}{\textwidth}{lXl}
 \hline\hline
-\textbf{Requisito} & \textbf{Descrizione} & \textbf{Use Case}\\
+\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
 \hline
-RQD-1    & Le prestazioni del simulatore hardware deve garantire la giusta esecuzione dei test e non la generazione di falsi negativi & - \\
+RQO1 & Il codice sorgente prodotto deve essere disponibile in una repository pubblica su Github & Interna \\
+\hline
+RQ02 & Deve essere prodotto un documento tecnico che spieghi il funzionamento del codice prodotto & Interna \\
 \hline
 \end{tabularx}
 \end{table}%
@@ -228,11 +291,14 @@ RQD-1    & Le prestazioni del simulatore hardware deve garantire la giusta esecu
 \begin{table}[H]
 \caption{Tabella del tracciamento dei requisiti di vincolo}
 \label{tab:requisiti-vincolo}
+\renewcommand{\arraystretch}{1.6}
 \begin{tabularx}{\textwidth}{lXl}
 \hline\hline
-\textbf{Requisito} & \textbf{Descrizione} & \textbf{Use Case}\\
+\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonte}\\
 \hline
-RVO-1    & La libreria per l'esecuzione dei test automatici deve essere riutilizzabile & - \\
+RVO1 & Le maschere devono essere sviluppate tramite il framework Vue.js & Interna \\
+\hline
+RVO2 & Le maschere devono essere sviluppate tramite il linguaggio javascript & Interna \\
 \hline
 \end{tabularx}
 \end{table}%

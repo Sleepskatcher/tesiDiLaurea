@@ -18,8 +18,7 @@ Come precedentemente spiegato le ore complessive dello stage possono essere cons
 	\item periodo di sviluppo della durata di circa 120 ore;
 	\item peridio di convalidazione finale della durata di circa 40 ore.
 \end{itemize}
-Nelle sezioni qui di seguito verranno elencate e spiegate le nozioni apprese nel periodo di studio.\\
-Per chiarezza sono state suddivise in principali e secondarie, non per dare meno importanza ad alcuni argomenti studiati ma per suddividerli in funzione dello sviluppo del progetto. Infatti le prime mi sono maggiormente servite per poter sviluppare le maschere, mentre le seconde mi sono servite per conoscenza generale e migliore collaborazione con i colleghi addetti al reparto back end.
+Le prime nozioni mi sono maggiormente servite per poter sviluppare le maschere, mentre le seconde mi sono servite per conoscenza generale e migliore collaborazione con i colleghi addetti al reparto back end.
 
 %**************************************************************
 \section{Nozioni principali}
@@ -27,12 +26,12 @@ Per chiarezza sono state suddivise in principali e secondarie, non per dare meno
 \subsection{Javascript}
 
 Javascript è un linguaggio di programmazione orientato agli oggetti e agli eventi comunemente utilizzato per la programmazione Web lato client. La sua enorme diffusione è dovuta al gran numero di librerie nate per semplificare la programmazione sul browser, dalla nascita di \gls{frameworkg} lato server e il mondo mobile che lo supporta come linguaggio principale.\\
-La caratteristica principale di Javascript è quella di essere il linguaggio di scripting per eccellenza e questo comporta una serie di vantaggi e svantaggi secondo l'uso che se ne deve fare e considerando il rapporto che si instaura nel meccanismo client-server. Il server invia al client i dati che possono arrivare in due diversi formati (testo e binario), ma il client sa comprendere solo il formato binario, per cui se arrivano dati in quel formato diventeranno immediatamente eseguibili altrimenti il client dovrà interpretare i dati.\\
+La caratteristica principale di Javascript è quella di essere il linguaggio di \textit{scripting} per eccellenza e questo comporta una serie di vantaggi e svantaggi secondo l'uso che se ne deve fare e considerando il rapporto che si instaura nel meccanismo client-server. Il server invia al \textit{client} i dati che possono arrivare in due diversi formati (testo e binario), ma il \textit{client} sa comprendere solo il formato binario, per cui se arrivano dati in quel formato diventeranno immediatamente eseguibili altrimenti il \textit{client} dovrà interpretare i dati.\\
 Sono presenti numerosi vantaggi e svantaggi di questo linguaggio, più importanti da sapere sono i seguenti:
 \begin{itemize}
 	\item \textbf{Vantaggi}:
 	\begin{itemize}
-		\item Velocità: è un linguaggio veloce siccome ogni funzione può essere avviata immediatamente invece di dover contattare il server ed aspettare una sua risposta;
+		\item Velocità: è un linguaggio veloce, siccome ogni funzione può essere avviata immediatamente invece di dover contattare il server ed aspettare una sua risposta;
 		\item Semplicità: è un linguaggio relativamente semplice da imparare ed implementare;
 		\item Versatilità: è un linguaggio che lavora bene con altri linguaggi e può essere usato in una grande varietà di applicazioni, infatti può essere inserito in una pagina web indipendentemente dall'estensione del file e può essere utilizzato all'interno di script scritti in altri linguaggi;
 		\item Carico del server: essendo Javascript un linguaggio lato client questo fa ridurre le domande al server del sito web.
@@ -80,7 +79,7 @@ REST è un insieme di principi architetturali per la progettazione che rendono i
 	\item \textit{identificazione delle risorse}: per risorsa si intende qualsiasi elemento in oggetto di elaborazione, ovvero qualsiasi oggetto su cui è possibile effettuare operazioni. Ciascuna risorsa deve essere identificata univocamente, il meccanismo più naturale è il concetto di URI;
 	\item \textit{uso esplicito dei metodi HTTP}: serve un meccanismo per indicare le operazioni che si possono fare sulle risorse, per questo motivo si sfruttano i metodi predefiniti del protocollo HTTP;
 	\item \textit{risorse autodescrittive}: è opportuno usare i formati più standard possibili per semplificare l'interazione con il client. Il tipo di rappresentazione è indicato nella risposta HTTP;
-	\item \textit{collegamenti tra risorse}: le risorse devono essere messe tra di loro in relazione tramite link ipertestuali, è un principio detto HATEOAS
+	\item \textit{collegamenti tra risorse}: le risorse devono essere messe tra di loro in relazione tramite link ipertestuali, è un principio detto HATEOAS;
 	\item \textit{comunicazione senza stato}: è un principio secondo il quale una richiesta non ha alcuna relazione con le richieste precedenti e successive.
 \end{itemize}
 
@@ -102,7 +101,7 @@ Di questo framework in particolare ho studiato: Spring Boot, Spring Data, Spring
 Spring Boot è un progetto Spring che ha lo scopo di rendere più semplice lo sviluppo e l'esecuzione delle applicazioni Spring. Un'applicazione richiede molti metadati per la configurazione e puoi risultare pesante, Spring Boot invece alleggerisce questo meccanismo fornendo una configurazione automatica. Infatti esso è basato su opinioni e convenzioni proprie per avere una configurazione minima con la possibilità di riscriverle se necessario. Alcune caratteristiche principali sono legate ai seguenti aspetti:
 \begin{itemize}
 	\item \textit{starter dependencies}, ovvero configurazione automatica delle librerie e delle dipendenze;
-	\item configurazione automatica di bean e componenti e delle loro relazioni;
+	\item configurazione automatica di \textit{bean} e componenti e delle loro relazioni;
 	\item \textit{actuator}, per ispezionare un applicazione in esecuzione.
 \end{itemize} 
 Spring Boot quindi semplifica la gestione delle dipendenze fornendo e supportando una serie di dipendenze dette \textit{starter}, ovvero dipendenze la cui inclusione implica l'inclusione automatica delle loro dipendenze transitive. La classe detta \textit{Spring Boot Application} esegue l'avvio dell'applicazione etichettando la classe di configurazione, abilitando la scansione e l'identificazione automatica dei componenti, ed infine creando i componenti mancanti necessari alla configurazione dell'applicazione.\\
@@ -119,10 +118,10 @@ Spring Data è un progetto ad alto livello di Spring con lo scopo di unificare e
 
 \subsubsection{Spring Data JPA}
 Spring Data JPA aiuta ad implementare facilmente sistemi basati su archiviazione di tipo JPA, framework per il linguaggio di programmazione Java che gestisce la persistenza dei dati in un database relazionale che usano le Java Platform, Standard Edition e Java Enterprise Edition. Questo modulo infatti si occupa del supporto per i livelli di accesso ai dati basati su JPA e rende più semplice la creazione di applicazioni basate su Spring che utilizzano tecnologie di accesso ai dati.\\
-Per molto tempo implementare un livello di accesso ai dati è risultato complicato: era necessario scrivere molto codice per eseguire query semplici, impaginazione e controllo dei dati. Spring Data JPA mira a ridurre lo sforzo all'importo effettivamente necessario. Lo sviluppatore scriverà le interfacce del repository, inclusi i metodi personalizzati, e sarà Spring a fornire l'implementazione automaticamente.
+Per molto tempo implementare un livello di accesso ai dati è risultato complicato: era necessario scrivere molto codice per eseguire \textit{query} semplici, impaginazione e controllo dei dati. Spring Data JPA mira a ridurre lo sforzo all'importo effettivamente necessario. Lo sviluppatore scriverà le interfacce del \textit{repository}, inclusi i metodi personalizzati, e sarà Spring a fornire l'implementazione automaticamente.
 
 \subsubsection{Spring Data REST}
-Spring Data REST semplifica la creazione di servizi Web REST basati su repository di Spring Data analizzando il modello di dominio dell'applicazione ed espone le risorse HTTP basate su \textit{hypermedia} per gli aggregati contenuti nel modello.\\
+Spring Data REST semplifica la creazione di servizi Web REST basati su \textit{repository} di Spring Data analizzando il modello di dominio dell'applicazione ed espone le risorse HTTP basate su \textit{hypermedia} per gli aggregati contenuti nel modello.\\
 Spring Data REST definisce automaticamente gli \textit{endpoint} di aggiunta, visualizzazione, rimozione e modifica. Così facendo viene eliminato molto del lavoro manuale solitamente associato a queste attività e rende semplice l'implementazione delle funzionalità \gls{CRUDg}$_G$.  
 
 \subsection{Blockchain}
