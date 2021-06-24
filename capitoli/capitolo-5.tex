@@ -78,7 +78,7 @@ Figma è uno strumento nato nel 2016 rivolto ai web designer che hanno bisogno d
 	\item utilizzo degli strumenti responsive oriented per una progettazione ottimale
 	\item lavora in vettoriale
 \end{itemize}
-Grazie a questo strumento io e gli altri stagisti legati all'ambito front end abbiamo potuto creare dei prototipi delle maschere che avremmo dovuto sviluppare.
+Grazie a questo strumento io e gli altri stagisti legati all'ambito \gls{front endg} abbiamo potuto creare dei prototipi delle maschere che avremmo dovuto sviluppare.
 
 \subsubsection{Stoplight}
 
@@ -89,7 +89,7 @@ Stoplight è una piattaforma di progettazione \gls{api} collaborativa che si int
 	\item bisogna cercare di capire gli altri ascoltando, indagando e rispondendo con attenzione.
 \end{itemize}
 Grazie a questa piattaforma si può aiutare gli utenti interni ed esterni ad integrarsi rapidamente alll'\gls{api} di un altro utente pubblicando documentazione interattiva, tutorial ed esempi di codice sempre aggiornati.\\
-Noi stagisti abbiamo utilizzato questo strumento per non far dipendere lo sviluppo del front end con quello del back end e quindi riuscire a sviluppare in parallelo le due parti ed effettuare l'integrazione tra le due solo dopo esserci assicurati di avere il lavoro quasi concluso e poterci concentrare sulla risoluzione di possibili problemi in integrazione.
+Noi stagisti abbiamo utilizzato questo strumento per non far dipendere lo sviluppo del \gls{front endg} con quello del \gls{back endg} e quindi riuscire a sviluppare in parallelo le due parti ed effettuare l'integrazione tra le due solo dopo esserci assicurati di avere il lavoro quasi concluso e poterci concentrare sulla risoluzione di possibili problemi in integrazione.
 
 \subsubsection{Visual Studio Code}
 
@@ -170,7 +170,7 @@ Per quanto riguarda la cartella legata al codice, essendo la più importante, ne
 \textit{Nelle sezioni di seguito verranno spiegate in dettaglio il funzionamento delle chiamate al back end e delle varie maschere implementate con le loro criticità}
 
 \section{Chiamate al back end}
-Il file principale, \textbf{\textit{index.js}}, contiene la configurazione di Vuex e del persisted state con l'inclusione dei moduli che sono di numero tanti quanti sono i servizi del back end che vanno ad invocare. Per rendere più chiaro ed efficiente il lavoro ho creato quindi il file \textbf{\textit{CurrentUser.js}}, legato al servizio del back end dell'utente, e il file \textbf{\textit{NftService.js}}, legato al servizio del back end degli NFT.\\
+Il file principale, \textbf{\textit{index.js}}, contiene la configurazione di Vuex e del persisted state con l'inclusione dei moduli che sono di numero tanti quanti sono i servizi del \gls{back endg} che vanno ad invocare. Per rendere più chiaro ed efficiente il lavoro ho creato quindi il file \textbf{\textit{CurrentUser.js}}, legato al servizio del back end dell'utente, e il file \textbf{\textit{NftService.js}}, legato al servizio del back end degli NFT.\\
 Entrambi i file hanno la struttura uguale e quello che cambia è il contenuto, infatti sono caratterizzati da quattro elementi costanti:
 \begin{itemize}
 	\item state, contenente le risorse che verranno utilizzate nei metodi;
@@ -180,7 +180,7 @@ Entrambi i file hanno la struttura uguale e quello che cambia è il contenuto, i
 \end{itemize}
 
 Gli state del file \textbf{\textit{CurrentUser.js}} li ho resi persistenti, in questo modo potranno essere utilizzati all'interno della web application, per esempio dopo che l'utente ha eseguito l'autenticazione utilizzo i suoi dati per visualizzare il suo nome nel bottone che lo porta alla pagina personale. Queste informazioni possono essere utilizzate per fare dei controlli che decidono se reindirizzare o meno certe parti della web application.\\
-Essendo legati a servizi diversi i metodi e le chiamate al back end dei due file sono molto diversi e nelle sezioni successive verranno spiegate nel dettaglio.
+Essendo legati a servizi diversi i metodi e le chiamate al \gls{back endg} dei due file sono molto diversi e nelle sezioni successive verranno spiegate nel dettaglio.
 
 \subsection{CurrentUser.js}
 
@@ -205,7 +205,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dall'immagine soprastante viene eseguita una chiamata POST al database specificando i dati dell'utente che verranno inviati. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il back end.
+	Come si può vedere dall'immagine soprastante viene eseguita una chiamata POST al database specificando i dati dell'utente che verranno inviati. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
 	\item \textbf{registrazione}
 	\begin{lstlisting}
 		signUp({ commit }, user) {
@@ -229,7 +229,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dall'immagine soprastante viene eseguita anche per la registrazione una chiamata POST al database specificando i dati dell'utente che verranno inviati, di numero maggiore rispetto ai dati per l'autenticazione. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il back end.
+	Come si può vedere dall'immagine soprastante viene eseguita anche per la registrazione una chiamata POST al database specificando i dati dell'utente che verranno inviati, di numero maggiore rispetto ai dati per l'autenticazione. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
 	\item \textbf{logout}
 	\begin{lstlisting}
 		logOut({ commit }) {
@@ -237,7 +237,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			localStorage.clear('user');
 		}
 	\end{lstlisting}
-	Come si può vedere dall'immagine soprastante questo è l'unico metodo che non possiede chiamate effettive al back end, infatti quando l'utente vuole effettuare il log out verrà semplicemente chiamato un metodo che fa ritornare l'utente alla homepage e cancella i dati dell'utente nello stato persistente. Infine viene svuotato il localStorage dai dati dell'utente.
+	Come si può vedere dall'immagine soprastante questo è l'unico metodo che non possiede chiamate effettive al \gls{back endg}, infatti quando l'utente vuole effettuare il log out verrà semplicemente chiamato un metodo che fa ritornare l'utente alla homepage e cancella i dati dell'utente nello stato persistente. Infine viene svuotato il localStorage dai dati dell'utente.
 	\item \textbf{modifica dei dati personali}
 	\begin{lstlisting}
 		updateUser({ commit }, user) {
@@ -260,7 +260,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			})
 		}
 	\end{lstlisting}
-	Come si può vedere dall'immagine soprastante viene eseguita la modifica dei dati personali tramite una chiamata PUT al database specificando i dati dell'utente che verranno inviati e inviando come parametro l'id identificativo dell'utente. Se la chiamata va a buon fine i dati aggiornati verranno salvati sia nello stato persistente che nel localStorage del web. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal back end.
+	Come si può vedere dall'immagine soprastante viene eseguita la modifica dei dati personali tramite una chiamata PUT al database specificando i dati dell'utente che verranno inviati e inviando come parametro l'id identificativo dell'utente. Se la chiamata va a buon fine i dati aggiornati verranno salvati sia nello stato persistente che nel localStorage del web. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{modifica della password}
 	\begin{lstlisting}
 		updatePassword({}, user) {
@@ -273,7 +273,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			})
 		}
 	\end{lstlisting}
-	Come si può vedere dall'immagine soprastante viene eseguita la modifica della password tramite una chiamata PUT al database. Essendo un dato che non deve essere utilizzato all'interno del sito per questioni di sicurezza, il database non ritorna alcuna risposta. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal back end.
+	Come si può vedere dall'immagine soprastante viene eseguita la modifica della password tramite una chiamata PUT al database. Essendo un dato che non deve essere utilizzato all'interno del sito per questioni di sicurezza, il database non ritorna alcuna risposta. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 \end{itemize}
 
 \subsection{NftService.js}
@@ -315,7 +315,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dall'immagine soprastante questo metodo serve per caricare una nuova opera nel database. Questo avviene tramite una chiamata POST al database fornendo come dati le informazioni della nuova opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal back end.
+	Come si può vedere dall'immagine soprastante questo metodo serve per caricare una nuova opera nel database. Questo avviene tramite una chiamata POST al database fornendo come dati le informazioni della nuova opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{modifica di un'opera esistente}
 	\begin{lstlisting}
 		updateOpera({ commit }, opera) {
@@ -342,7 +342,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dall'immagine soprastante questo metodo serve per modificare un'opera già presente nel database. Questo avviene tramite una chiamata PUT al database fornendo come dati le nuove informazioni dell'opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal back end.
+	Come si può vedere dall'immagine soprastante questo metodo serve per modificare un'opera già presente nel database. Questo avviene tramite una chiamata PUT al database fornendo come dati le nuove informazioni dell'opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{home}
 	\begin{lstlisting}
 		getHomeOperas({ commit }) {
@@ -363,8 +363,21 @@ Questa componente è presente in quasi tutto il sito ad eccezione delle pagine d
 Un'altra particolarità di questo componente è la presenza di due bottoni che variano in funzione se l'utente è autenticato o meno nel sito. Infatti se l'utente non si autentica si vedranno due bottoni per effettuare il login o la registrazione, mentre se esso è autenticato si bottoni serviranno per visualizzare la pagina personale oppure effettuare il logout. Per gestire questa particolarità è stato implementato un controllo condizionale dove controlla appunto lo stato dell'utente tramite una variabile chiamata \textit{isLogged}, che assume il valore a vero se autenticato.
 \subsection{Home}
 Questa è la pagina iniziale tramite la quale l'utente può visualizzare tutte le opere presenti nel database con integrata la paginazione, inoltre è presente una combobox che da la possibilità di filtrare le opere per categoria. Infine è presente un bottone "Viasualizza dettagli" che ha una funzionalità che verrà spiegata in seguito.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.9\columnwidth]{cap4/home.png}
+		\caption{Home Page}
+	\end{center}
+\end{figure}
 \subsection{Visualizza dettagli}
 Questa funzionalità fa apparire una finestra di dialogo a schermo interno che mostra tutte le informazioni dettagliate dell'opera selezionata. Nella parte sinistra l'utente potrà vedere una preview dell'opera, mentre nella parte sinistra l'utente potrà vedere: titolo, prezzo con valuta, descrizione, autore, proprietario e categorie di appartenenza.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.9\columnwidth]{cap4/dettagliHome.png}
+		\caption{Finestra di dialogo delle informazioni dell'opera}
+	\end{center}
+Questa finestra di dialogo è stata progettata a schermo intero in modo tale da poter aggiungere ulteriori informazioni o funzionalità senza dover modificare la struttura della finestra di dialogo.
+\end{figure}
 \subsection{Login}
 In questa pagina l'utente può effettuare l'autenticazione nel sito tramite email e password. In questi due campi sono state inserite delle regole che, se non rispettate, generano un errore visualizzabile tramite una scritta sotto il campo che si sta modificando. Le regole in questione sono:
 \begin{itemize}
@@ -375,11 +388,11 @@ In questa pagina l'utente può effettuare l'autenticazione nel sito tramite emai
 \end{itemize}
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.9\columnwidth]{login.png}
+		\includegraphics[width=0.9\columnwidth]{cap4/login.png}
 		\caption{Pagina di login}
 	\end{center}
 \end{figure}
-In alto a sinistra è presente un bottone per tornare alla home. Inoltre il bottone per validare l'autenticazione è disabilitato fino a quando l'utente non compila entrambi i campi per evitare chiamate al back end con dati mancanti.
+In alto a sinistra è presente un bottone per tornare alla home. Inoltre il bottone per validare l'autenticazione è disabilitato fino a quando l'utente non compila entrambi i campi per evitare chiamate al \gls{back endg} con dati mancanti.
 \subsection{Registrazione}
 In questa pagine l'utente può effettuare la registrazione nel sito inserendo: nome, cognome, email, data di nascita, wallet address, password e conferma password. Similmente alla pagina di login sono state inserite delle regole che, se non rispettate, generano un errore visualizzabile tramite una scritta sotto il campo che si sta modificando. Le regole in questione sono:
 \begin{itemize}
@@ -394,13 +407,19 @@ In questa pagine l'utente può effettuare la registrazione nel sito inserendo: n
 \end{itemize}
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.9\columnwidth]{registrazione.png}
+		\includegraphics[width=0.9\columnwidth]{cap4/registrazione.png}
 		\caption{Pagina di registrazione}
 	\end{center}
 \end{figure}
-Come per la pagina di autenticazione, in alto a sinistra è presente un bottone per tornare alla home. Inoltre il bottone per validare l'autenticazione è disabilitato fino a quando l'utente non compila entrambi i campi per evitare chiamate al back end con dati mancanti.
+Come per la pagina di autenticazione, in alto a sinistra è presente un bottone per tornare alla home. Inoltre il bottone per validare l'autenticazione è disabilitato fino a quando l'utente non compila entrambi i campi per evitare chiamate al \gls{back endg} con dati mancanti.
 \subsection{Pagina dell'utente}
-In questa pagina l'utente può visualizzare le sue informazioni personali e le opere che possiede. Nel momento che verranno modificate le informazioni tramite le funzioni apposite da parte dell'utente, queste verranno modificate a schermo automaticamente.
+In questa pagina l'utente può visualizzare le sue informazioni personali e le opere che possiede. Nel momento che verranno modificate le informazioni da parte dell'utente, queste verranno modificate a schermo automaticamente.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.9\columnwidth]{cap4/userPage.png}
+		\caption{Pagina personale dell'utente}
+	\end{center}
+\end{figure}
 \subsection{Upload opera}
 In questa pagina è possibile per l'utente aggiungere una nuova opera. I campi da compilare sono: titolo, descrizione, file, prezzo. Quando l'utente carica un file verranno generati automaticamente una preview del file specifica in base al tipo del file inserito e un campo non modificabile che indica il tipo del file inserito. Similmente alla pagina di registrazione sono state inserite delle regole che, se non rispettate, generano un errore visualizzabile tramite una scritta sotto il campo che si sta modificando. Le regole in questione sono:
 \begin{itemize}
@@ -408,17 +427,24 @@ In questa pagina è possibile per l'utente aggiungere una nuova opera. I campi d
 \end{itemize}
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.9\columnwidth]{uploadOpera.png}
+		\includegraphics[width=0.9\columnwidth]{cap4/uploadOpera.png}
 		\caption{Pagina di upload dell'opera}
 	\end{center}
 \end{figure}
+Nel momento in cui l'utente carica il file verrà generata un'immagine in base al tipo di file: se viene caricata un'immagine si potrà visualizzare una \textit{preview} di essa invece se viene caricata un'altra tipologia di file verrà generata un'immagine che indica la tipologia.
 \subsection{Gestione opere}
 L'utente può unicamente modificare una sua opera ma non può cancellarla. Questo è dovuto al fatto che al momento dell'upload l'opera verrà caricata sulla blockchain rendendola un elemento unico ed irripetibile quindi non può cancellarla. Per motivi analoghi l'utente ha delle restrizioni anche nella modifica dell'opera; infatti di essa può modificare solo: titolo, descrizione, prezzo e categorie di appartenenza. Un altro campo non modificabile è il tipo del file caricato.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.9\columnwidth]{cap4/modificaOpera.png}
+		\caption{Finestra di dialogo per la modifica dell'opera}
+	\end{center}
+\end{figure}
 \subsection{Modifica dati personali}
 L'utente, dopo aver premuto un bottone con la dicitura "Modifica dati personali", vedrà apparire una finestra di avviso dove può modificare i propri dati. Per motivi di univocità l'utente non potrà modificare l'email con cui ha fatto l'accesso, infatti potrà modificare solamente il nome ed il cognome. Inoltre per motivi di sicurezza il bottone per confermare la modifica è disabilitato di default e viene data la possibilità di confermare la modifica solo dopo aver inserito la password corrente.
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.8\columnwidth]{immagini/modificaDati.png}
+		\includegraphics[width=0.8\columnwidth]{cap4//modificaDati.png}
 		\caption{Finestra di dialogo per la modifica dei dati}
 	\end{center}
 \end{figure}
@@ -426,7 +452,11 @@ L'utente, dopo aver premuto un bottone con la dicitura "Modifica dati personali"
 L'utente dopo aver premuto un bottone con la dicitura "Modifica password", vedrà apparire una finestra di avviso dove può modificare la password. Per poterlo fare, per motivi di sicurezza, l'utente dovrà inserire la sua email, la password corrente e la nuova password. Similmente alla modifica dei dati personali, il bottone per confermare la modifica rimarrà disattivato fino a quando l'utente non avrà completato tutti i campi.
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.8\columnwidth]{modificaPassword.png}
+		\includegraphics[width=0.8\columnwidth]{cap4/modificaPassword.png}
 		\caption{Finestra di dialogo per la modifica della password}
 	\end{center}
 \end{figure}
+
+\section{Generazione della preview}
+
+Per quanto riguarda le immagini presenti nel sito, viene generata una preview in base alla tipologia del file. Infatti se il tipo del file è un immagine si potrà visualizzare una preview effettiva di essa, altrimenti fare il discorso di doc, audio e video che hanno un'immagine preview pre impostata.
