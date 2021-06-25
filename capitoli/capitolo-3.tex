@@ -11,6 +11,7 @@
 
 %**************************************************************
 \section{Organizzazione dello studio}
+\label{sec:organizzazione-studio}
 
 Come precedentemente spiegato le ore complessive dello stage possono essere considerate suddivise in 3 periodi:
 \begin{itemize}
@@ -22,8 +23,10 @@ Le prime nozioni mi sono maggiormente servite per poter sviluppare le maschere, 
 
 %**************************************************************
 \section{Nozioni principali}
+\label{sec:nozioni-principali}
 
 \subsection{Javascript}
+\label{subsec:javascript}
 
 Javascript è un linguaggio di programmazione orientato agli oggetti e agli eventi comunemente utilizzato per la programmazione Web lato client. La sua enorme diffusione è dovuta al gran numero di librerie nate per semplificare la programmazione sul browser, dalla nascita di \gls{frameworkg} lato server e il mondo mobile che lo supporta come linguaggio principale.\\
 La caratteristica principale di Javascript è quella di essere il linguaggio di \textit{scripting} per eccellenza e questo comporta una serie di vantaggi e svantaggi secondo l'uso che se ne deve fare e considerando il rapporto che si instaura nel meccanismo client-server. Il server invia al \textit{client} i dati che possono arrivare in due diversi formati (testo e binario), ma il \textit{client} sa comprendere solo il formato binario, per cui se arrivano dati in quel formato diventeranno immediatamente eseguibili altrimenti il \textit{client} dovrà interpretare i dati.\\
@@ -44,6 +47,7 @@ Sono presenti numerosi vantaggi e svantaggi di questo linguaggio, più important
 \end{itemize}
 
 \subsection{Vue.js}
+\label{subsec:vue.js}
 
 Vue.js è un \gls{frameworkg} javascript open-source per la configurazione di interfacce utente e single-page application.\\
 
@@ -51,17 +55,21 @@ Vue.js è un \gls{frameworkg} javascript open-source per la configurazione di in
 
 %**************************************************************
 \section{Nozioni secondarie}
+\label{sec:nozioni-secondarie}
 
 \subsection{Java}
+\label{subsec:java}
 
 Java è un linguaggio di programmazione ad alto livello, orientato agli oggetti e a tipizzazione statica che si appoggia sull'omonima piattaforma software di esecuzione. Java nasce dall'esigenza di risolvere due problemi concreti comuni tra i linguaggi orientati ad oggetti: garantire maggiore semplicità nella scrittura e gestione del codice, e permettere la realizzazione di programmi slegati da un'architettura precisa.\\
 Il primo problema fu risolto utilizzando un sistema basato sulla gestione della memoria detto \textit{garbage collector}, liberando così il programmatore dall'onere della gestione della memoria. Il secondo problema, invece, fu risolto facendo in modo che i programmi non fossero compilati in codice macchina ma in una sorta di codice intermedio che dovrà poi essere eseguito non dall'hardware direttamente ma dalla macchina virtuale detta JVM, ovvero \textit{Java Virtual Machine}.\\
 
 \subsection{Concetti web}
+\label{subsec:concetti-web}
 
 Riguardo a questo argomento sono stati ripassati in dettaglio due argomenti: il concetto di Servlet e il concetto di REST.
 
 \subsubsection{Servlet}
+\label{subsubsec:servlet}
 
 Una Servlet è un oggetto scritto in linguaggio Java in grado di gestire le richieste generate da uno o più client attraverso scambi di messaggi tra il server ed i client stessi. La servlet può utilizzare le Java API per implementare le diverse funzionalità e le specifiche servlet API per mettere a disposizione un'interfaccia standard per gestire le comunicazioni tra il web client e la servlet. E' importante sapere che le servlet non hanno delle GUI.\\
 I vantaggi della Servlet sono:
@@ -73,6 +81,7 @@ I vantaggi della Servlet sono:
 \end{itemize}
 
 \subsubsection{REST}
+\label{subsubsec:rest}
 
 REST è un insieme di principi architetturali per la progettazione che rendono il Web adatto a realizzare Web Service. I principi sono:
 \begin{itemize}
@@ -84,8 +93,9 @@ REST è un insieme di principi architetturali per la progettazione che rendono i
 \end{itemize}
 
 \subsection{Spring}
+\label{subsec:spring}
 
-Il framework Spring è una piattafroma Java che fornisce un'infrastruttura di supporto per sviluppatori in Java in modo tale che loro si occupino dalla parte dell'applicazione. I benefici di Spring sono:
+Il \gls{frameworkg} Spring è una piattafroma Java che fornisce un'infrastruttura di supporto per sviluppatori in Java in modo tale che loro si occupino dalla parte dell'applicazione. I benefici di Spring sono:
 \begin{itemize}
 	\item dipendenze esplicite ed evidenti grazie alla Dependency Injection;
 	\item i contenitori legati all'Inversion of Control tendono ad essere leggeri;
@@ -97,6 +107,7 @@ Il framework Spring è una piattafroma Java che fornisce un'infrastruttura di su
 Di questo framework in particolare ho studiato: Spring Boot, Spring Data, Spring Data JPA e Spring Data REST. Nelle sezioni successive verranno spiegati questi concetti.
 
 \subsubsection{Spring Boot}
+\label{subsubsec:spring-boot}
 
 Spring Boot è un progetto Spring che ha lo scopo di rendere più semplice lo sviluppo e l'esecuzione delle applicazioni Spring. Un'applicazione richiede molti metadati per la configurazione e puoi risultare pesante, Spring Boot invece alleggerisce questo meccanismo fornendo una configurazione automatica. Infatti esso è basato su opinioni e convenzioni proprie per avere una configurazione minima con la possibilità di riscriverle se necessario. Alcune caratteristiche principali sono legate ai seguenti aspetti:
 \begin{itemize}
@@ -114,27 +125,36 @@ Per riassumere i vantaggi offerti da Spring Boot sono:
 \end{itemize}
 
 \subsubsection{Spring Data}
+\label{subsubsec:spring-data}
+
 Spring Data è un progetto ad alto livello di Spring con lo scopo di unificare e facilitare l'accesso a diversi livelli di archiviazione, ovvero database sia relazionali che non relazionali. Spring Data fornisce interfacce generiche per gli aspetti legati a \textit{Crud Repository} e \textit{Paging And Sorting Repository} per ottenere implementazioni specifiche dall'archivio di persistenza. Grazie alle repository basterà scrivere l'interfaccia con i metodi di ricerca definiti in base ad un determinato insieme di convenzioni che possono variare in base al tipo di archiviazione in uso. Sarà Spring  a fornire un'implementazione appropriata di tale interfaccia in fase di esecuzione.
 
 \subsubsection{Spring Data JPA}
+\label{subsubsec:spring-data-jpa}
+
 Spring Data JPA aiuta ad implementare facilmente sistemi basati su archiviazione di tipo JPA, framework per il linguaggio di programmazione Java che gestisce la persistenza dei dati in un database relazionale che usano le Java Platform, Standard Edition e Java Enterprise Edition. Questo modulo infatti si occupa del supporto per i livelli di accesso ai dati basati su JPA e rende più semplice la creazione di applicazioni basate su Spring che utilizzano tecnologie di accesso ai dati.\\
 Per molto tempo implementare un livello di accesso ai dati è risultato complicato: era necessario scrivere molto codice per eseguire \textit{query} semplici, impaginazione e controllo dei dati. Spring Data JPA mira a ridurre lo sforzo all'importo effettivamente necessario. Lo sviluppatore scriverà le interfacce del \textit{repository}, inclusi i metodi personalizzati, e sarà Spring a fornire l'implementazione automaticamente.
 
 \subsubsection{Spring Data REST}
+\label{subsubsec:spring-data-rest}
+
 Spring Data REST semplifica la creazione di servizi Web REST basati su \textit{repository} di Spring Data analizzando il modello di dominio dell'applicazione ed espone le risorse HTTP basate su \textit{hypermedia} per gli aggregati contenuti nel modello.\\
 Spring Data REST definisce automaticamente gli \textit{endpoint} di aggiunta, visualizzazione, rimozione e modifica. Così facendo viene eliminato molto del lavoro manuale solitamente associato a queste attività e rende semplice l'implementazione delle funzionalità \gls{CRUDg}$_G$.  
 
 \subsection{Blockchain}
+\label{subsec:blockchain}
 
 La Blockchain è una tecnologia che sfrutta le caratteristiche di una rete informatica di nodi e consente di gestire ed aggiornare, in modo univoco e sicuro, un registro contenente dati ed informazioni in maniera aperta, condivisa e distribuita senza la necessità di un'entità centrale di controllo e verifica. Le applicazioni della blockchain sono contraddistinte dalla necessità di decentralizzazione e disintermediazione in modo da evitare banche, istituzioni finanziare e così via.\\
 Queste tecnologia abilita l'Internet of Value e si basa su un registro distribuito, sistema in cui i nodi di una rete possiedono la medesima copia di un database che modificano e leggono i dati indipendentemente dagli altri nodi. Il registro di queste tecnologie è strutturato come una catena di blocchi contenenti le transazioni ed il consenso è distribuito su tutti i nodi della rete, in questo modo i nodi possono partecipare al processo di validazione delle transazioni da includere nel registro.
 
 \subsection{Ethereum}
+\label{subsec:ethereum}
 
 Ethereum è una piattaforma digitale che permette di costruire una gamma di applicazioni decentralizzate. Queste applicazioni possono includere programmi di sicurezza, sistemi elettorali e metodi di pagamento. Questa piattaforma opera fuori dal mandato delle autorità centrali ed è per questo motivo che opera nel mercato delle criptovalute.\\
 Ethereum funziona come piattaforma software basata sulla tecnologia blockchain, simile a quella dei bitcoin perchè conserva le transazioni, ed inoltre permette ai programmatori di costruire applicazioni decentralizzate. Queste applicazioni sono software open source che utilizzano la blockchain e gli smart contract e non hanno bisogno di mediatori. 
 
 \subsection{NFT}
+\label{subsec:nft}
 
 \gls{NFT}, acronimo per Non Fungible Token, si tratta di token insostituibili che rappresentano la proprietà di un bene, come un'opera d'arte digitale o reale. Un token è un oggetto con un valore particolare e simbolico, in particolare un token sulla blockchain è un'informazione digitale registrata su un registro distribuito. Questa informazione è associata ad un utente specifico e rappresenta un certo tipo di diritto, come proprietà di un oggetto o la ricezione di un pagamento. Gli \gls{NFT} sono diversi dagli altri token perchè sono insostituibili, unici, indivisibili ed è questo il motivo per cui si prestano alla cessione dei diritti di proprietà di opere d'arte.\\
 Quando una persona compra un \gls{NFT} si deve capire che:
