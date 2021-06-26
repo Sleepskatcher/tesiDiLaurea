@@ -19,11 +19,6 @@ Lo strumento utilizzato per la realizzazione di tali diagrammi è draw.io.
 \subsection{Attori dei casi d'uso}
 \label{subsec:attori}
 
-\begin{figure}[H] 
-	\centering 
-	\includegraphics[width=0.7\columnwidth]{usecase/attori} 
-	\caption{Attori dei casi d'uso}
-\end{figure}
 Dopo un'attenta analisi ho concluso che per le funzionalità offerte sono presenti unicamente attori primari, in quanto non ci sono collegamenti con alcun framework o libreria esterna.
 Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
 \begin{itemize}
@@ -35,7 +30,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.8\columnwidth]{usecase/UC1} 
-		\caption{U.C1.1 Registrazione}
+		\caption{U.C1 Registrazione}
 	\end{figure}
 \usecaseactors{Utente non autenticato.}
 \usecasepre{L'utente non è ancora presente nei registri del sistema.}
@@ -89,7 +84,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseest{
 	\begin{itemize}
 		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCEMAILNONVALIDA).
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc7}).
 	\end{itemize}
 }
 \usecasepost{L'utente ha inserito l'email.}
@@ -102,7 +97,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseest{
 	\begin{itemize}
 		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc7}).
 	\end{itemize}
 }
 \usecasepost{L'utente ha inserito la password.}
@@ -115,7 +110,8 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseest{
 	\begin{itemize}
 		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERRORECONFERMAPASSWORDNONVALIDA).
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc8});
+		\item Viene effettuato un controllo di uguaglianza con la password precedentemente inserita e i due campi non risultano uguali quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato(\ref{uc9}).
 	\end{itemize}
 }
 \usecasepost{L'utente ha inserito la conferma della password.}
@@ -128,7 +124,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseest{
 	\begin{itemize}
 		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREDATADINASCITANONVALIDA).
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido in quanto l'utente risulta essere non maggiorenne quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{10}).
 	\end{itemize}
 }
 \usecasepost{L'utente ha inserito l'anno di nascita.}
@@ -141,34 +137,38 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseest{
 	\begin{itemize}
 		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREWALLETNONVALIDO).
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{11}).
 	\end{itemize}
 }
 \usecasepost{L'utente ha inserito il Wallet Address.}
 \end{usecase}
 
 \begin{usecase}{2}{Login}\label{uc2}
+		\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.8\columnwidth]{usecase/UC2} 
+		\caption{U.C2 Login}
+	\end{figure}
 \usecaseactors{Utente non autenticato.}
 \usecasepre{L'utente non è autenticato ma è presente nei registri di sistema.}
 \usecasedesc{L'utente accede all'applicazione e naviga fino alla pagina di login. L'utente inserisce i dati necessari (\ref{uc2.1}) e li conferma, questo porta l'utente ad autenticarsi nel sistema.}
-\usecaseest{L'utente inserisce i dati ma non è presente nel database quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente i dati (UCERRORENONELDB).}
+\usecaseest{L'utente inserisce i dati ma non è presente nel database quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente i dati (\ref{uc12}).}
 \usecasepost{L'utente risulta autenticato nella piattaforma.}
 \end{usecase}
 
-\begin{usecase}{2.1}{Inserimento dei dati per il login}\label{uc2.1}
-	\begin{figure}[H] 
+\begin{usecase}{2.1}{Inserimento dati per il login}\label{uc2.1}
+		\begin{figure}[H] 
 		\centering 
-		\includegraphics[width=0.9\columnwidth]{usecase/UC2.1} 
-		\caption{U.C1.1 Inserimento dei dati per il login}
+		\includegraphics[width=0.8\columnwidth]{usecase/UC2.1} 
+		\caption{U.C2.1 Inserimento dati per il login}
 	\end{figure}
 \usecaseactors{Utente non autenticato.}
 \usecasepre{L'utente non autenticato si trova nella pagina di login.}
 \usecasedesc{L'utente non autenticato compila i campi nel seguente modo:
 \begin{itemize}
-	\item Inserimento della email (U.C.2.1.1);
-	\item Inserimento della password (U.C.2.1.2).
-\end{itemize}
-}
+	\item Inserimento della email (\ref{uc2.1.1});
+	\item Inserimento della password (\ref{uc2.1.2}).
+\end{itemize}}
 \usecasepost{L'utente è autenticato come utente autenticato all'interno della web application.}
 \end{usecase}
 
@@ -179,9 +179,8 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseest{
 	\begin{itemize}
 		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCEMAILNONVALIDA).
-	\end{itemize}
-}
+		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc7}).
+	\end{itemize}}
 \usecasepost{L'utente ha inserito l'email.}
 \end{usecase}
 
@@ -192,7 +191,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 	\usecaseest{
 		\begin{itemize}
 			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
+			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc8}).
 		\end{itemize}}
 	\usecasepost{L'utente ha inserito la password.}
 \end{usecase}
@@ -205,9 +204,14 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{4}{Visualizzazione lista opere}\label{uc4}
+		\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.8\columnwidth]{usecase/UC4} 
+		\caption{U.C4 Visualizzazione lista opere}
+	\end{figure}
 	\usecaseactors{Utente non autenticato.}
 	\usecasepre{L'utente ha aperto il sito e si trova nella pagina iniziale.}
-	\usecasedesc{L'utente può visualizzare la lista delle opere in vendita.}
+	\usecasedesc{L'utente può visualizzare la lista delle opere in vendita. In particolare l'utente può filtrare le opere (\ref{uc4.1}) oppure visualizzare nel dettaglio un'opera selezionata (\ref{uc4.2})}
 	\usecasepost{L'utente ha visualizzato la lista.}
 \end{usecase}
 
@@ -233,6 +237,11 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{5}{Visualizzazione pagina personale}\label{uc5}
+		\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.8\columnwidth]{usecase/UC5} 
+		\caption{U.C5 Visualizzazione pagina personale}
+	\end{figure}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente si trova nella home page.}
 	\usecasedesc{L'utente può navigare nel sito per raggiungere la sua pagina personale.}
@@ -240,9 +249,21 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{5.1}{Modifica dati}\label{uc5.1}
+		\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.8\columnwidth]{usecase/UC5.1} 
+		\caption{U.C5.1 Modifica dati}
+	\end{figure}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente si trova nella sua pagina personale.}
-	\usecasedesc{L'utente può modificare i dati personali.}
+	\usecasedesc{L'utente può modificare i dati personali. In dettaglio l'utente può modificare:
+	\begin{itemize}
+		\item il nome (\ref{uc5.1.1});
+		\item il cognome (\ref{uc5.1.2});
+		\item la data di nascita (\ref{uc5.1.3});
+		\item l'address wallet (\ref{uc5.1.4}).
+	\end{itemize}
+	Per poter confermare le modifiche l'utente deve inserire la propria password (\ref{uc5.1.5})}
 	\usecasepost{L'utente ha modificato i suoi dati.}
 \end{usecase}
 
@@ -269,23 +290,23 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 	\usecaseest{
 		\begin{itemize}
 			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREDATADINASCITANONVALIDA).
+			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido in quanto l'utente risulta essere non maggiorenne quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc10}).
 		\end{itemize}
 	}
 	\usecasepost{L'utente ha modificato la data di nascita.}
 \end{usecase}
 
-\begin{usecase}{5.1.4}{Modifica del wallet address}\label{uc5.1.4}
+\begin{usecase}{5.1.4}{Modifica del wallet}\label{uc5.1.4}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
-	\usecasedesc{L'utente può modificare il proprio wallett address.}
+	\usecasedesc{L'utente può modificare il proprio address wallett.}
 	\usecaseest{
 		\begin{itemize}
 			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREWALLETNONVALIDO).
+			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc11}).
 		\end{itemize}
 	}
-	\usecasepost{L'utente ha modificato il proprio wallett address.}
+	\usecasepost{L'utente ha modificato il proprio address wallett.}
 \end{usecase}
 
 \begin{usecase}{5.1.5}{Inserimento della password}\label{uc5.1.5}
@@ -295,19 +316,24 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 	\usecaseest{
 		\begin{itemize}
 			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
-			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
+			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc8}).
 	\end{itemize}}
 	\usecasepost{L'utente ha inserito la password.}
 \end{usecase}
 
-\begin{usecase}{5.2}{Vis. lista opere personali}\label{uc5.2}
+\begin{usecase}{5.2}{Visualizzazione lista opere personali}\label{uc5.2}
+	\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.8\columnwidth]{usecase/UC5.2} 
+		\caption{U.C5.2 Visualizzazione lista opere personali}
+	\end{figure}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella sua pagina personale.}
-	\usecasedesc{L'utente può visualizzare la lista delle sue opere.}
+	\usecasedesc{L'utente può visualizzare la lista delle sue opere. Inoltre ha la possibilità di visualizzare in dettaglio i dati (\ref{uc5.2.1}) oppure modificare i dati (\ref{uc5.2.2}) un'opera selezionata}
 	\usecasepost{L'utente visualizza le sue opere.}
 \end{usecase}
 
-\begin{usecase}{5.2.1}{Vis. dettaglio opera}\label{uc5.2.1}
+\begin{usecase}{5.2.1}{Visualizza dettaglio opera}\label{uc5.2.1}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella pagina personale e sta visualizzando la lista delle sue opere.}
 	\usecasedesc{L'utente può selezionare un'opera per poter visualizzare le sue informazioni nel dettaglio.}
@@ -353,7 +379,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 	\usecasepost{L'utente ha modificato il prezzo.}
 \end{usecase}
 
-\begin{usecase}{5.3}{Upload dell'opera}\label{uc5.3}
+\begin{usecase}{5.3}{Upload di una nuova opera}\label{uc5.3}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella schermata di caricamento dell'opera.}
 	\usecasedesc{L'utente ha la possibilità di caricare una nuova opera.}
@@ -407,9 +433,42 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 	\usecasepost{All'utente viene mostrato un messaggio che lo avvisa del mancato riempimento del campo dati obbligatorio.}
 \end{usecase}
 
-\begin{usecase}{7}{vu}
-	\usecaseactors{l}
-	\usecasepre{k}
+\begin{usecase}{7}{Errore email non valida}\label{uc7}
+	\usecaseactors{Utente autenticato o utente non autenticato.}
+	\usecasepre{L'utente ha inserito l'email in un formato non valido.}
+	\usecasedesc{L'utente ha inserito l'email in un formato non valido e viene informato del scorretto inserimento del campo dati.}
+	\usecasepost{All'utente viene mostrato un messaggio che lo avvisa dello scorretto formato del campo appena inserito.}
+\end{usecase}
+
+\begin{usecase}{8}{Errore password non valida}\label{uc8}
+	\usecaseactors{Utente autenticato o utente non autenticato.}
+	\usecasepre{L'utente ha inserito una password in un formato non valido.}
+	\usecasedesc{L'utente ha inserito la password in un formato non valido e viene informato del scorretto inserimento del campo dati.}
+	\usecasepost{All'utente viene mostrato un messaggio che lo avvisa dello scorretto formato del campo appena inserito.}
+\end{usecase}
+
+\begin{usecase}{9}{Errore conferma password differente}\label{uc9}
+	\usecaseactors{Utente autenticato o utente non autenticato.}
+	\usecasepre{L'utente ha compilato}
+	\usecasedesc{L'utente ha inserito la conferma della password differente dalla password precedentemente inserita e viene informato del scorretto inserimento del campo dati.}
+	\usecasepost{All'utente viene mostrato un messaggio che lo avvisa della differenza tra le due password inserite.}
+\end{usecase}
+
+\begin{usecase}{10}{Errore maggiore età}\label{uc10}
+	\usecaseactors{Utente autenticato o utente non autenticato.}
+	\usecasepre{L'utente ha compilato}
+	\usecasepost{h}
+\end{usecase}
+
+\begin{usecase}{11}{Errore wallet non valido}\label{uc11}
+	\usecaseactors{Utente autenticato o utente non autenticato.}
+	\usecasepre{L'utente ha compilato}
+	\usecasepost{h}
+\end{usecase}
+
+\begin{usecase}{12}{Errore utente non presente nel database}\label{uc12}
+	\usecaseactors{Utente autenticato o utente non autenticato.}
+	\usecasepre{L'utente ha compilato}
 	\usecasepost{h}
 \end{usecase}
 
