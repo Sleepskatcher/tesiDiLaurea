@@ -14,22 +14,30 @@
 
 Per lo studio dei casi d'uso del prodotto creato sono stati creati dei diagrammi.
 Questi diagrammi, detti appunto dei casi d'uso (in inglese \emph{Use Case Diagram}), sono diagrammi di tipo \gls{uml} dedicati alla descrizione del sistema e delle funzioni o servizi offerti da un esso, e come gli utilizzatori interagiscono con esso.\\
-Lo strumento utilizzato per la realizzazione di tali diagrammi è draw.io.
+Lo strumento utilizzato per la realizzazione di tali diagrammi è draw.io, piattaforma online che permette di creare diagrammi direttamente nel browser e salvarli nel proprio cloud di Google.
 
 \subsection{Attori dei casi d'uso}
 \label{subsec:attori}
 
-Dopo un'attenta analisi ho concluso che per le funzionalità offerte sono presenti unicamente attori primari, in quanto non ci sono collegamenti con alcun framework o libreria esterna.
+Dopo un'attenta analisi ho concluso che per le funzionalità offerte sono presenti unicamente attori primari, in quanto non ci sono collegamenti con alcun \gls{frameworkg} o libreria esterna.
 Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti attori primari:
 \begin{itemize}
 	\item \textbf{utente non autenticato}: indica che l'utente non ha ancora effettuato l'autenticazione o la registrazione all'interno della web application;
 	\item \textbf{utente autenticato}: indica che l'utente ha effettuato l'autenticazione all'interno della web application e comporta che può accedere a diverse funzionalità che sarebbero altrimenti inaccessibili.
 \end{itemize}
 
+\begin{figure}[H] 
+	\centering 
+	\includegraphics[width=0.8\columnwidth]{usecase/uc0} 
+	\caption{U.C0 Scenario principale}
+\end{figure}
+
+\newpage
+
 \begin{usecase}{1}{Registrazione}\label{uc1}
 	\begin{figure}[H] 
 		\centering 
-		\includegraphics[width=0.8\columnwidth]{usecase/UC1} 
+		\includegraphics[width=0.7\columnwidth]{usecase/UC1} 
 		\caption{U.C1 Registrazione}
 	\end{figure}
 \usecaseactors{Utente non autenticato.}
@@ -39,7 +47,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{1.1}{Inserimento dati per la registrazione}\label{uc1.1}
-		\begin{figure}[H] 
+	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.9\columnwidth]{usecase/UC1.1} 
 		\caption{U.C1.1 Inserimento dei dati per la registrazione}
@@ -144,7 +152,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{2}{Login}\label{uc2}
-		\begin{figure}[H] 
+	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.8\columnwidth]{usecase/UC2} 
 		\caption{U.C2 Login}
@@ -157,7 +165,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{2.1}{Inserimento dati per il login}\label{uc2.1}
-		\begin{figure}[H] 
+	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.8\columnwidth]{usecase/UC2.1} 
 		\caption{U.C2.1 Inserimento dati per il login}
@@ -204,7 +212,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{4}{Visualizzazione lista opere}\label{uc4}
-		\begin{figure}[H] 
+	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.8\columnwidth]{usecase/UC4} 
 		\caption{U.C4 Visualizzazione lista opere}
@@ -237,7 +245,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{5}{Visualizzazione pagina personale}\label{uc5}
-		\begin{figure}[H] 
+	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.8\columnwidth]{usecase/UC5} 
 		\caption{U.C5 Visualizzazione pagina personale}
@@ -249,7 +257,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{5.1}{Modifica dati}\label{uc5.1}
-		\begin{figure}[H] 
+	\begin{figure}[H] 
 		\centering 
 		\includegraphics[width=0.8\columnwidth]{usecase/UC5.1} 
 		\caption{U.C5.1 Modifica dati}
@@ -341,6 +349,11 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{5.2.2}{Modifica opera}\label{uc5.2.2}
+	\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.8\columnwidth]{usecase/UC5.2.2.2} 
+		\caption{U.C5.2.2 Modifica opera}
+	\end{figure}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella pagina personale e sta visualizzando la lista delle sue opere.}
 	\usecasedesc{L'utente può selezionare un'opera per poter modificare i suoi dati.}
@@ -380,6 +393,11 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \end{usecase}
 
 \begin{usecase}{5.3}{Upload di una nuova opera}\label{uc5.3}
+	\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.8\columnwidth]{usecase/UC5.3} 
+		\caption{U.C5.3 Upload di una nuova opera}
+	\end{figure}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella schermata di caricamento dell'opera.}
 	\usecasedesc{L'utente ha la possibilità di caricare una nuova opera.}
