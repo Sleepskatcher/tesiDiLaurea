@@ -14,7 +14,7 @@
 
 Per lo studio dei casi d'uso del prodotto creato sono stati creati dei diagrammi.
 Questi diagrammi, detti appunto dei casi d'uso (in inglese \emph{Use Case Diagram}), sono diagrammi di tipo \gls{uml} dedicati alla descrizione del sistema e delle funzioni o servizi offerti da un esso, e come gli utilizzatori interagiscono con esso.\\
-Lo strumento utilizzato per la realizzazione di tali diagrammi è StarUML, uno dei software più noti per la creazione di vari tipi di diagrammi utili alla progettazione architetturale di un prodotto software.
+Lo strumento utilizzato per la realizzazione di tali diagrammi è draw.io.
 
 \subsection{Attori dei casi d'uso}
 \label{subsec:attori}
@@ -34,8 +34,8 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \begin{usecase}{1}{Registrazione}\label{uc1}
 	\begin{figure}[H] 
 		\centering 
-		\includegraphics[width=0.9\columnwidth]{usecase/UC1.1} 
-		\caption{U.C1.1 Inserimento dei dati per la registrazione}
+		\includegraphics[width=0.8\columnwidth]{usecase/UC1} 
+		\caption{U.C1.1 Registrazione}
 	\end{figure}
 \usecaseactors{Utente non autenticato.}
 \usecasepre{L'utente non è ancora presente nei registri del sistema.}
@@ -43,18 +43,23 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasepost{L'utente risulta presente nei registri del sistema ed è autenticato nella piattaforma.}
 \end{usecase}
 
-\begin{usecase}{1.1}{Inserimento dei dati per la registrazione}\label{uc1.1}
+\begin{usecase}{1.1}{Inserimento dati per la registrazione}\label{uc1.1}
+		\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=0.9\columnwidth]{usecase/UC1.1} 
+		\caption{U.C1.1 Inserimento dei dati per la registrazione}
+	\end{figure}
 \usecaseactors{Utente non autenticato.}
 \usecasepre{L'utente non autenticato si trova nella pagina di registrazione.}
 \usecasedesc{L'utente non autenticato compila i campi nel seguente modo:
 \begin{itemize}
-	\item Inserimento del nome (U.C.1.1.1);
-	\item Inserimento del cognome (U.C.1.1.2);
-	\item Inserimento dell'email (U.C.1.1.3);
-	\item Inserimento della password (U.C.1.1.4);
-	\item Inserimento della conferma della password (U.C.1.1.5);
-	\item Inserimento dell'anno di nascita (U.C.1.1.6);
-	\item Inserimento del Wallet Address (U.C.1.1.7).
+	\item Inserimento del nome (\ref{uc1.1.1});
+	\item Inserimento del cognome (\ref{uc1.1.2});
+	\item Inserimento dell'email (\ref{uc1.1.3});
+	\item Inserimento della password (\ref{uc1.1.4});
+	\item Inserimento della conferma della password (\ref{uc1.1.5});
+	\item Inserimento dell'anno di nascita (\ref{uc1.1.6});
+	\item Inserimento del Wallet Address (\ref{uc1.1.7}).
 \end{itemize}
 }
 \usecasepost{L'utente ha completato la compilazione dei campi e può procedere con la registrazione.}
@@ -64,7 +69,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseactors{Utente non autenticato.}
 \usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
 \usecasedesc{L'utente non autenticato inserisce il proprio nome.}
-\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 \usecasepost{L'utente ha inserito il nome.}
 \usecaseest{L'utente non inserisce nulla e appare il messaggio di errore.}
 \end{usecase}
@@ -73,7 +78,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecaseactors{Utente non autenticato.}
 \usecasepre{L'utente non è autenticato e non ha compilato questo campo.}
 \usecasedesc{L'utente non autenticato inserisce il proprio cognome.}
-\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 \usecasepost{L'utente ha inserito il cognome.}
 \end{usecase}
 
@@ -83,7 +88,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasedesc{L'utente non autenticato inserisce la sua email.}
 \usecaseest{
 	\begin{itemize}
-		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCEMAILNONVALIDA).
 	\end{itemize}
 }
@@ -96,7 +101,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasedesc{L'utente non autenticato inserisce la sua password.}
 \usecaseest{
 	\begin{itemize}
-		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
 	\end{itemize}
 }
@@ -109,7 +114,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasedesc{L'utente non autenticato inserisce la conferma della password.}
 \usecaseest{
 	\begin{itemize}
-		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERRORECONFERMAPASSWORDNONVALIDA).
 	\end{itemize}
 }
@@ -122,7 +127,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasedesc{L'utente non autenticato inserisce il proprio anno di nascita.}
 \usecaseest{
 	\begin{itemize}
-		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREDATADINASCITANONVALIDA).
 	\end{itemize}
 }
@@ -135,7 +140,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasedesc{L'utente non autenticato inserisce il Wallet Address.}
 \usecaseest{
 	\begin{itemize}
-		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREWALLETNONVALIDO).
 	\end{itemize}
 }
@@ -173,7 +178,7 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 \usecasedesc{L'utente, per procedere con l'autenticazione inserisce l'email.}
 \usecaseest{
 	\begin{itemize}
-		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+		\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 		\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCEMAILNONVALIDA).
 	\end{itemize}
 }
@@ -186,213 +191,226 @@ Di conseguenza i possibili attori dei casi d'uso analizzati sono i seguenti atto
 	\usecasedesc{L'utente, per procedere con l'autenticazione inserisce la password.}
 	\usecaseest{
 		\begin{itemize}
-			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
 		\end{itemize}}
 	\usecasepost{L'utente ha inserito la password.}
 \end{usecase}
 
-\begin{usecase}{4}{Logout}\label{uc4}
+\begin{usecase}{3}{Logout}\label{uc3}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e vuole uscire dal proprio account.}
 	\usecasedesc{L'utente vuole uscire dal proprio account}
 	\usecasepost{L'utente non è più autenticato}
 \end{usecase}
 
-\begin{usecase}{5}{Visualizzazione lista opere}
+\begin{usecase}{4}{Visualizzazione lista opere}\label{uc4}
 	\usecaseactors{Utente non autenticato.}
 	\usecasepre{L'utente ha aperto il sito e si trova nella pagina iniziale.}
 	\usecasedesc{L'utente può visualizzare la lista delle opere in vendita.}
 	\usecasepost{L'utente ha visualizzato la lista.}
 \end{usecase}
 
-\begin{usecase}{5.1}{Inserimento filtro sulla lista opere}
+\begin{usecase}{4.1}{Inserimento filtro sulla lista opere}\label{uc4.1}
 	\usecaseactors{Utente non autenticato.}
 	\usecasepre{L'utente si trova nella pagina principale e sta visualizzando le opere.}
 	\usecasedesc{L'utente può applicare dei filtri alla lista di opere presenti nella homepage.}
 	\usecasepost{L'utente ha visualizzato la lista di opere filtrate.}
 \end{usecase}
 
-\begin{usecase}{5.1.1}{Inserimento filtro per categorie sulla lista opere}
+\begin{usecase}{4.1.1}{Inserimento filtro per categorie sulla lista opere}\label{uc4.1.1}
 	\usecaseactors{Utente non autenticato.}
 	\usecasepre{L'utente si trova nella pagina principale e sta visualizzando le opere.}
 	\usecasedesc{L'utente può applicare dei filtri per categoria alla lista di opere presenti nella homepage.}
 	\usecasepost{L'utente ha visualizzato la lista di opere filtrate per categoria.}
 \end{usecase}
 
-\begin{usecase}{5.2}{Visualizzazione dettaglio opera}
+\begin{usecase}{4.2}{Visualizzazione dettaglio opera}\label{uc4.2}
 	\usecaseactors{Utente non autenticato.}
 	\usecasepre{L'utente si trova nella pagina principale.}
 	\usecasedesc{L'utente può selezionare un'opera per poter visualizzare le sue informazioni nel dettaglio.}
 	\usecasepost{L'utente ha visualizzato i dettagli dell'opera selezionata.}
 \end{usecase}
 
-\begin{usecase}{6}{Visualizzazione pagina personale}
+\begin{usecase}{5}{Visualizzazione pagina personale}\label{uc5}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente si trova nella home page.}
 	\usecasedesc{L'utente può navigare nel sito per raggiungere la sua pagina personale.}
 	\usecasepost{L'utente ha visualizzato la sua pagina.}
 \end{usecase}
 
-\begin{usecase}{6.1}{Modifica dati}
+\begin{usecase}{5.1}{Modifica dati}\label{uc5.1}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente si trova nella sua pagina personale.}
 	\usecasedesc{L'utente può modificare i dati personali.}
 	\usecasepost{L'utente ha modificato i suoi dati.}
 \end{usecase}
 
-\begin{usecase}{6.1.1}{Modifica del nome}
+\begin{usecase}{5.1.1}{Modifica del nome}\label{uc5.1.1}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare il proprio nome.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha modificato il nome.}
 \end{usecase}
 
-\begin{usecase}{6.1.2}{Modifica del cognome}
+\begin{usecase}{5.1.2}{Modifica del cognome}\label{uc5.1.2}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare il proprio cognome.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha modificato il cognome.}
 \end{usecase}
 
-\begin{usecase}{6.1.3}{Modifica della data di nascita}
+\begin{usecase}{5.1.3}{Modifica della data di nascita}\label{uc5.1.3}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare la propria data di nascita.}
 	\usecaseest{
 		\begin{itemize}
-			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREDATADINASCITANONVALIDA).
 		\end{itemize}
 	}
 	\usecasepost{L'utente ha modificato la data di nascita.}
 \end{usecase}
 
-\begin{usecase}{6.1.4}{Modifica del wallet address}
+\begin{usecase}{5.1.4}{Modifica del wallet address}\label{uc5.1.4}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare il proprio wallett address.}
 	\usecaseest{
 		\begin{itemize}
-			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREWALLETNONVALIDO).
 		\end{itemize}
 	}
 	\usecasepost{L'utente ha modificato il proprio wallett address.}
 \end{usecase}
 
-\begin{usecase}{6.2}{Inserimento della password}
+\begin{usecase}{5.1.5}{Inserimento della password}\label{uc5.1.5}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha compilato questo campo.}
 	\usecasedesc{L'utente può inserire la propria password per procedere alla modifica dei dati.}
 	\usecaseest{
 		\begin{itemize}
-			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO);
+			\item Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6});
 			\item Viene effettuato un controllo sul campo inserito e risulta non essere valido quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREPASSWORDNONVALIDA).
 	\end{itemize}}
 	\usecasepost{L'utente ha inserito la password.}
 \end{usecase}
 
-\begin{usecase}{6.3}{Vis. lista opere personali}
+\begin{usecase}{5.2}{Vis. lista opere personali}\label{uc5.2}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella sua pagina personale.}
 	\usecasedesc{L'utente può visualizzare la lista delle sue opere.}
 	\usecasepost{L'utente visualizza le sue opere.}
 \end{usecase}
 
-\begin{usecase}{6.3.1}{Vis. dettaglio opera}
+\begin{usecase}{5.2.1}{Vis. dettaglio opera}\label{uc5.2.1}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella pagina personale e sta visualizzando la lista delle sue opere.}
 	\usecasedesc{L'utente può selezionare un'opera per poter visualizzare le sue informazioni nel dettaglio.}
 	\usecasepost{L'utente ha visualizzato i dettagli dell'opera selezionata.}
 \end{usecase}
 
-\begin{usecase}{6.3.2}{Modifica opera}
+\begin{usecase}{5.2.2}{Modifica opera}\label{uc5.2.2}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella pagina personale e sta visualizzando la lista delle sue opere.}
 	\usecasedesc{L'utente può selezionare un'opera per poter modificare i suoi dati.}
 	\usecasepost{L'utente ha modificato i dati dell'opera.}
 \end{usecase}
 
-\begin{usecase}{6.3.2.1}{Modifica titolo}
+\begin{usecase}{5.2.2.1}{Modifica titolo}\label{uc5.2.2.1}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare il titolo dell'opera.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha modificato il titolo dell'opera.}
 \end{usecase}
 
-\begin{usecase}{6.3.2.2}{Modifica descrizione}
+\begin{usecase}{5.2.2.2}{Modifica descrizione}\label{uc5.2.2.2}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare la descrizione.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha modificato la descrizione.}
 \end{usecase}
 
-\begin{usecase}{6.3.2.3}{Modifica categorie}
+\begin{usecase}{5.2.2.3}{Modifica categorie}\label{uc5.2.2.3}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare le categorie.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha modificato le categorie.}
 \end{usecase}
 
-\begin{usecase}{6.3.2.4}{Modifica prezzo}
+\begin{usecase}{5.2.2.4}{Modifica prezzo}\label{uc5.2.2.4}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha modificato questo campo.}
 	\usecasedesc{L'utente può modificare il prezzo.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha modificato il prezzo.}
 \end{usecase}
 
-\begin{usecase}{6.4}{Upload dell'opera}
+\begin{usecase}{5.3}{Upload dell'opera}\label{uc5.3}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e si trova nella schermata di caricamento dell'opera.}
 	\usecasedesc{L'utente ha la possibilità di caricare una nuova opera.}
 	\usecasepost{L'utente ha caricato una nuova opera.}
 \end{usecase}
 
-\begin{usecase}{6.4.1}{Inserimento del titolo}
+\begin{usecase}{5.3.1}{Inserimento del titolo}\label{uc5.3.1}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha compilato questo campo.}
 	\usecasedesc{L'utente ha la possibilità di inserire il titolo dell'opera.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha inserito il titolo dell'opera.}
 \end{usecase}
 
-\begin{usecase}{6.4.2}{Inserimento della descrizione}
+\begin{usecase}{5.3.2}{Inserimento della descrizione}\label{uc5.3.2}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha compilato questo campo.}
 	\usecasedesc{L'utente ha la possibilità di inserire la descrizione dell'opera.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha inserito la descrizione.}
 \end{usecase}
 
-\begin{usecase}{6.4.3}{Inserimento del file}
+\begin{usecase}{5.3.3}{Inserimento del file}\label{uc5.3.3}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha compilato questo campo.}
 	\usecasedesc{L'utente ha la possibilità di inserire il file.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha inserito il file.}
 \end{usecase}
 
-\begin{usecase}{6.4.4}{Inserimento delle categorie}
+\begin{usecase}{5.3.4}{Inserimento delle categorie}\label{uc5.3.4}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha compilato questo campo.}
 	\usecasedesc{L'utente ha la possibilità di inserire le categorie.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha inserito le categorie.}
 \end{usecase}
 
-\begin{usecase}{6.4.5}{Inserimento del prezzo}
+\begin{usecase}{5.3.5}{Inserimento del prezzo}\label{uc5.3.5}
 	\usecaseactors{Utente autenticato.}
 	\usecasepre{L'utente è autenticato e non ha compilato questo campo.}
 	\usecasedesc{L'utente ha la possibilità di inserire il prezzo.}
-	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (UCERROREOBBLIGATORIO).}
+	\usecaseest{Viene effettuato un controllo e risulta che questo campo non è stato compilato quindi si presenta un messaggio di errore e viene fornita la possibilità di inserire nuovamente il dato (\ref{uc6}).}
 	\usecasepost{L'utente ha inserito il prezzo.}
+\end{usecase}
+
+\begin{usecase}{6}{Errore campo obbligatorio}\label{uc6}
+	\usecaseactors{Utente autenticato o utente non autenticato.}
+	\usecasepre{L'utente non ha inserito alcun carattere in un campo dati obbligatorio.}
+	\usecasedesc{L'utente non ha inserito alcun carattere in un campo dati obbligatorio e viene informato del mancato riempimento del campo dati.}
+	\usecasepost{All'utente viene mostrato un messaggio che lo avvisa del mancato riempimento del campo dati obbligatorio.}
+\end{usecase}
+
+\begin{usecase}{7}{vu}
+	\usecaseactors{l}
+	\usecasepre{k}
+	\usecasepost{h}
 \end{usecase}
 
 \section{Tracciamento dei requisiti}
