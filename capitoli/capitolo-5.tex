@@ -29,7 +29,7 @@ Di seguito viene data una panoramica delle tecnologie e strumenti utilizzati per
 \end{figure}
 Vue.js è un framework javascript open source nato nel 2013 che presenta un'architettura adottabile in modo incrementale che si concentra sulla composizione dei componenti, inoltre sono presenti funzionalità avanzate offerte tramite librerie e pacchetti di supporto. I componenti Vue estendono gli elementi HTML di base per incapsulare del codice riutilizzabile quindi a livello generale i componenti sono elementi personalizzati a cui il compilatore Vue associa una particolare funzionalità.\\
 Vue utilizza quindi una sintassi basata su HTML e consente di associare il DOM renderizzato ai dati dell'istanza di Vue sottostante. In questo modo i modelli Vue possono essere analizzati da browser e parser HTML conformi alle modifiche ed inoltre con il sistema di reattività Vue è in grado di calcolare il numero minimo di componenti per eseguire nuovamente il rendering applicando la quantità minima di manipolazioni DOM quando cambia lo stato dell'app. Vue presenta un sistema reattivo grazie all'utilizzo di oggetti semplici Javascript ed ad un re-rendering ottimizzato: ogni componente durante il render tiene traccia delle sue dipendenze in modo tale che il sistema sappia quando e di quali componenti deve effettuare nuovamente il render.\\
-Un problema che afflige le web application a pagina singola è che forniscono agli utenti la risposta basata solamente sull'URL dal server, di conseguenza l'utilizzo dei segnalibri a determinate schermate e la condivisione dei collegamenti a sezioni specifiche risulta molto difficile se non impossibile. Vue.js per riuscire a risolvere questo problema fornisce un'interfaccia, detta router, che da la possibilità di modificare ciò che viene visualizzato sulla pagina in base all'URL indipendentemente da come esso viene modificato. Infatti Vue.js viene fornito con il pacchetto open source "vue-router" che fornisce un'API per aggiornare l'URL dell'applicazione, supportare la cronologia di navigazione e le reimpostazioni di email e password. Tramite questa tipologia di router i componenti devono essere mappati alla route a cui appartengono per indicare dove deve essere eseguito il loro render.\\
+Un problema che afflige le \gls{web applicationg} a pagina singola è che forniscono agli utenti la risposta basata solamente sull'URL dal server, di conseguenza l'utilizzo dei segnalibri a determinate schermate e la condivisione dei collegamenti a sezioni specifiche risulta molto difficile se non impossibile. Vue.js per riuscire a risolvere questo problema fornisce un'interfaccia, detta router, che da la possibilità di modificare ciò che viene visualizzato sulla pagina in base all'URL indipendentemente da come esso viene modificato. Infatti Vue.js viene fornito con il pacchetto open source "vue-router" che fornisce un'API per aggiornare l'URL dell'applicazione, supportare la cronologia di navigazione e le reimpostazioni di email e password. Tramite questa tipologia di router i componenti devono essere mappati alla route a cui appartengono per indicare dove deve essere eseguito il loro render.\\
 Questo framework implementa il pattern MVVM, acronimo per Model-View-View-Model, una declinazione del più famoso MVC, ovvero Model-View-Controller. I componenti del MVVM sono:
 \begin{itemize}
 	\item Model (o Modello): l'implementazione del dominio dati come per il classico Modello del pattern MVC;
@@ -42,7 +42,7 @@ La grossa differenza tra il pattern implementato da Vue.js e il Model-View-Contr
 \label{subsubsec:vuetify}
 
 Vuetify è un framework UI completo costruito su Vue.js nel 2014 ed il suo obiettivo è fornire agli sviluppatori gli strumenti per poter creare esperienze utente ricche e coinvolgenti. A differenza di altri framework Vuetify è progettato da zero in modo tale da renderlo facile da imparare ed essere gratificante da padroneggiare con centinaia di componenti realizzate dalle specifiche di Material Design.\\
-Un pregio di questo framework è che adotta un approccio al mobile, questo significa che la web application sviluppata tramite esso sarà pienamente utilizzabile immediatamente su un tablet, un telefono ed un computer. Inoltre è un framework in sviluppo attivo che viene aggiornato settimanalmente rispondendo ai problemi e relativi report della community. Un altro pregio è, come si può vedere nell'immagine sottostante, il gran numero di funzionalità che possiede Vuetify in confronto agli altri framework di Vue.
+Un pregio di questo framework è che adotta un approccio al mobile, questo significa che la \gls{web applicationg} sviluppata tramite esso sarà pienamente utilizzabile immediatamente su un tablet, un telefono ed un computer. Inoltre è un framework in sviluppo attivo che viene aggiornato settimanalmente rispondendo ai problemi e relativi report della community. Un altro pregio è, come si può vedere nell'immagine sottostante, il gran numero di funzionalità che possiede Vuetify in confronto agli altri framework di Vue.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\columnwidth]{vuetify.png}
@@ -117,9 +117,9 @@ Un altro punto di forza è la sua integrazione con Git facilitando il controllo 
 \section{Organizzazione dei file}
 \label{sec:organizzazione-file}
 
-Quando si crea un progetto per la prima volta tramite il framework Vue.js vengono create di default delle cartelle e dei file per facilitare la progettazione del software. La suddivisione delle cartelle è rappresentata qui di seguito.
+Quando si crea un progetto per la prima volta tramite il \gls{frameworkg} Vue.js vengono create di default delle cartelle e dei file per facilitare la progettazione del software. La suddivisione delle cartelle è rappresentata qui di seguito.
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Organizzazione dei file., label=lst::orgFile]
 	|-- front-end-vue
 	|-- codice
 	|   |-- .editorconfig
@@ -195,7 +195,7 @@ Entrambi i file hanno la struttura uguale e quello che cambia è il contenuto, i
 	\item getters, contenente i metodi che ritornano i valori presenti nelle risorse.
 \end{itemize}
 
-Gli state del file \textbf{\textit{CurrentUser.js}} li ho resi persistenti, in questo modo potranno essere utilizzati all'interno della web application, per esempio dopo che l'utente ha eseguito l'autenticazione utilizzo i suoi dati per visualizzare il suo nome nel bottone che lo porta alla pagina personale. Queste informazioni possono essere utilizzate per fare dei controlli che decidono se reindirizzare o meno certe parti della web application.\\
+Gli state del file \textbf{\textit{CurrentUser.js}} li ho resi persistenti, in questo modo potranno essere utilizzati all'interno della \gls{web applicationg}, per esempio dopo che l'utente ha eseguito l'autenticazione utilizzo i suoi dati per visualizzare il suo nome nel bottone che lo porta alla pagina personale. Queste informazioni possono essere utilizzate per fare dei controlli che decidono se reindirizzare o meno certe parti della \gls{web applicationg}.\\
 Essendo legati a servizi diversi i metodi e le chiamate al \gls{back endg} dei due file sono molto diversi e nelle sezioni successive verranno spiegate nel dettaglio.
 
 \subsection{CurrentUser.js}
@@ -204,7 +204,7 @@ Essendo legati a servizi diversi i metodi e le chiamate al \gls{back endg} dei d
 In questo file ho implementato diversi servizi legati all'utente. I servizi in questione sono:
 \begin{itemize}
 	\item \textbf{Autenticazione}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Autententicazione., label=lst::autenticazione]
 		loginUser({ commit }, user) {
 			axios
 			.post(urlBackEnd + 'login', {
@@ -224,7 +224,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante viene eseguita una chiamata POST al database specificando i dati dell'utente che verranno inviati. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
 	\item \textbf{Registrazione}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Registrazione., label=lst::registrazione]
 		signUp({ commit }, user) {
 			axios
 			.post(urlBackEnd + 'signup', {
@@ -248,7 +248,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante viene eseguita anche per la registrazione una chiamata POST al database specificando i dati dell'utente che verranno inviati, di numero maggiore rispetto ai dati per l'autenticazione. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
 	\item \textbf{Logout}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Logout., label=lst::logout]
 		logOut({ commit }) {
 			commit('setLoggedOut');
 			localStorage.clear('user');
@@ -256,7 +256,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante questo è l'unico metodo che non possiede chiamate effettive al \gls{back endg}, infatti quando l'utente vuole effettuare il log out verrà semplicemente chiamato un metodo che fa ritornare l'utente alla homepage e cancella i dati dell'utente nello stato persistente. Infine viene svuotato il localStorage dai dati dell'utente.
 	\item \textbf{modifica dei dati personali}
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Modifica dei dati personali., label=lst::modDati]
 		updateUser({ commit }, user) {
 			var url = urlStop + `user/${JSON.parse(localStorage.getItem('user')).id}`;
 			console.log(user);
@@ -279,7 +279,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante viene eseguita la modifica dei dati personali tramite una chiamata PUT al database specificando i dati dell'utente che verranno inviati e inviando come parametro l'id identificativo dell'utente. Se la chiamata va a buon fine i dati aggiornati verranno salvati sia nello stato persistente che nel localStorage del web. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{Modifica della password}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Modifica della password., label=lst::modPassword]
 		updatePassword({}, user) {
 			axios.put(urlStop + 'user/password', {
 				email: user.email,
@@ -299,7 +299,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 In questo file ho implementato diversi servizi legati agli NFT. I servizi in questione sono:
 \begin{itemize}
 	\item \textbf{Opere dell'utente}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Opere dell'utente., label=lst::opereUtente]
 		userOperas({ commit }) {
 			var url =
 			urlBackEnd + `nft/user/${JSON.parse(localStorage.getItem('user')).id}`;
@@ -310,7 +310,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante questo metodo serve per ritornare le opere dell'utente. Questo avviene tramite una chiamata GET al database fornendo come parametro l'id identificativo dell'utente.
 	\item \textbf{Categorie disponibili}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Categorie disponibili., label=lst::catDisponibili]
 		getCategories({ commit }) {
 			axios.get(urlBackEnd + 'categories'+examples).then(response => {
 				commit('setCategories', response.data);
@@ -319,7 +319,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante questo metodo serve per ritornare le categorie disponibili nel database tramite una chiamata GET al database. Questo metodo viene invocato ogni qual volta serve sapere le categorie presenti, quindi ad esempio per caricare una nuova opera, per modificarne una o per la creazione del filtro presente nella homepage.
 	\item \textbf{Caricamento di una nuova opera}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Caricamento di una nuova opera., label=lst::uploadOpera]
 		uploadOpera({ commit }, opera) {
 			var url =
 			urlBackEnd + `nft/user/${JSON.parse(localStorage.getItem('user')).id}`;
@@ -336,7 +336,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante questo metodo serve per caricare una nuova opera nel database. Questo avviene tramite una chiamata POST al database fornendo come dati le informazioni della nuova opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{Modifica di un'opera esistente}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Modifica di un'opera esistente., label=lst::modOpera]
 		updateOpera({ commit }, opera) {
 			var url =
 			urlStop + `nft/user/${JSON.parse(localStorage.getItem('user')).id}`;
@@ -363,7 +363,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 	\end{lstlisting}
 	Come si può vedere dallo snippet di codice soprastante questo metodo serve per modificare un'opera già presente nel database. Questo avviene tramite una chiamata PUT al database fornendo come dati le nuove informazioni dell'opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{Visualizzazione delle opere nella home}:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Visualizzazione delle opere nella home., label=lst::visOpereHome]
 		getHomeOperas({ commit }) {
 			axios.get(urlBackEnd + 'nft'+examples).then(response => {
 				commit('setHomeOperas', response.data);
