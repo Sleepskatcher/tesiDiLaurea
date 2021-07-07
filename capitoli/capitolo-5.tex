@@ -13,7 +13,7 @@
 \section{Tecnologie e strumenti}
 \label{sec:tecnologie-strumenti}
 
-Di seguito viene data una panoramica delle tecnologie e strumenti utilizzati per lo sviluppo delle maschere e per la collaborazione con i colleghi stagisiti ed il tutor aziendale.
+Di seguito viene data una panoramica delle tecnologie e strumenti utilizzati per lo sviluppo delle maschere e per la collaborazione con i colleghi stagisti ed il tutor aziendale.
 
 \subsection{Tecnologie}
 \label{subsec:tecnologie}
@@ -27,22 +27,22 @@ Di seguito viene data una panoramica delle tecnologie e strumenti utilizzati per
 		\caption{Logo di Vue.js}
 	\end{center}
 \end{figure}
-Vue.js è un framework javascript open source nato nel 2013 che presenta un'architettura adottabile in modo incrementale che si concentra sulla composizione dei componenti, inoltre sono presenti funzionalità avanzate offerte tramite librerie e pacchetti di supporto. I componenti Vue estendono gli elementi HTML di base per incapsulare del codice riutilizzabile quindi a livello generale i componenti sono elementi personalizzati a cui il compilatore Vue associa una particolare funzionalità.\\
-Vue utilizza quindi una sintassi basata su HTML e consente di associare il DOM renderizzato ai dati dell'istanza di Vue sottostante. In questo modo i modelli Vue possono essere analizzati da browser e parser HTML conformi alle modifiche ed inoltre con il sistema di reattività Vue è in grado di calcolare il numero minimo di componenti per eseguire nuovamente il rendering applicando la quantità minima di manipolazioni DOM quando cambia lo stato dell'app. Vue presenta un sistema reattivo grazie all'utilizzo di oggetti semplici Javascript ed ad un re-rendering ottimizzato: ogni componente durante il render tiene traccia delle sue dipendenze in modo tale che il sistema sappia quando e di quali componenti deve effettuare nuovamente il render.\\
-Un problema che afflige le \gls{web applicationg} a pagina singola è che forniscono agli utenti la risposta basata solamente sull'URL dal server, di conseguenza l'utilizzo dei segnalibri a determinate schermate e la condivisione dei collegamenti a sezioni specifiche risulta molto difficile se non impossibile. Vue.js per riuscire a risolvere questo problema fornisce un'interfaccia, detta router, che modifica ciò che viene visualizzato sulla pagina in base all'URL corrente, indipendentemente da come è stato modificato. Infatti Vue.js viene fornito con il pacchetto open source "vue-router" che fornisce un'API per aggiornare l'URL dell'applicazione, supportare la cronologia di navigazione e le reimpostazioni di email e password. Tramite questa tipologia di router i componenti devono essere mappati alla route a cui appartengono per indicare dove deve essere eseguito il loro render.\\
-Questo framework implementa il pattern MVVM, acronimo per Model-View-View-Model, una declinazione del più famoso MVC, ovvero Model-View-Controller. I componenti del MVVM sono:
+Vue.js è un \gls{frameworkg} Javascript \textit{open source} nato nel 2013 che presenta un'architettura adottabile in modo incrementale che si concentra sulla composizione dei componenti, inoltre sono presenti funzionalità avanzate offerte tramite librerie e pacchetti di supporto. I componenti Vue estendono gli elementi HTML di base per incapsulare del codice riutilizzabile quindi a livello generale i componenti sono elementi personalizzati a cui il compilatore Vue associa una particolare funzionalità.\\
+Vue utilizza quindi una sintassi basata su HTML e consente di associare il \textit{DOM} renderizzato ai dati dell'istanza di Vue sottostante. In questo modo i modelli Vue possono essere analizzati da browser e \textit{parser} HTML conformi alle modifiche ed inoltre con il sistema di reattività Vue è in grado di calcolare il numero minimo di componenti per eseguire nuovamente il \textit{rendering} applicando la quantità minima di manipolazioni DOM quando cambia lo stato dell'app. Vue presenta un sistema reattivo grazie all'utilizzo di oggetti semplici Javascript ed ad un \textit{re-rendering} ottimizzato: ogni componente durante il render tiene traccia delle sue dipendenze in modo tale che il sistema sappia quando e di quali componenti deve effettuare nuovamente il render.\\
+Un problema che affligge le \gls{web applicationg} a pagina singola è che forniscono agli utenti la risposta basata solamente sull'URL dal server, di conseguenza l'utilizzo dei segnalibri a determinate schermate e la condivisione dei collegamenti a sezioni specifiche risulta molto difficile se non impossibile. Vue.js per riuscire a risolvere questo problema fornisce un'interfaccia, detta \textit{router}, che modifica ciò che viene visualizzato sulla pagina in base all'URL corrente, indipendentemente da come è stato modificato. Infatti Vue.js viene fornito con il pacchetto \textit{open source} "\textit{vue-router}" che fornisce un'API per aggiornare l'URL dell'applicazione, supportare la cronologia di navigazione e le reimpostazioni di email e password. Tramite questa tipologia di \textit{router} i componenti devono essere mappati alla \textit{route} a cui appartengono per indicare dove deve essere eseguito il loro render.\\
+Questo \gls{frameworkg} implementa il pattern MVVM, acronimo per \textit{Model-View-View-Model}, una declinazione del più famoso MVC, ovvero \textit{Model-View-Controller}. I componenti del MVVM sono:
 \begin{itemize}
-	\item Model (o Modello): l'implementazione del dominio dati come per il classico Modello del pattern MVC;
-	\item View (o Vista): il componente grafico renderizzato dall'utente formato da HTML e CSS;
-	\item ViewModel (o Vista per il Modello): il collante tra gli altri due componenti, esso fornisce alla View i dati in formato consono alla rappresentazione ed il comportamento di alcuni elementi dinamici.
+	\item \textit{Model} (o Modello): l'implementazione del dominio dati come per il classico Modello del pattern MVC;
+	\item \textit{View} (o Vista): il componente grafico renderizzato dall'utente formato da HTML e CSS;
+	\item \textit{ViewModel} (o Vista per il Modello): il collante tra gli altri due componenti, esso fornisce alla \textit{View} i dati in formato consono alla rappresentazione ed il comportamento di alcuni elementi dinamici.
 \end{itemize}
-La grossa differenza tra il pattern implementato da Vue.js e il Model-View-Controller sta nella differenza tra Controller e ViewModel. Il primo, infatti, è una porzione di codice che gestisce la logica di business grazie al Model e ritorna una View da mostrare all'utente; il secondo, invece, rappresenta una versione parallela al Model che risulta essere legato alla View e descrive il comportamento di quest'ultima con funzioni associate. Quindi mentre il Controller esegue logiche di business prima del rendering della View, il ViewModel definisce il comportamento dell'applicazione a runtime.
+La grossa differenza tra il pattern implementato da Vue.js e il \textit{Model-View-Controller} sta nella differenza tra Controller e ViewModel. Il primo, infatti, è una porzione di codice che gestisce la logica di business grazie al Model e ritorna una \textit{View} da mostrare all'utente; il secondo, invece, rappresenta una versione parallela al Model che risulta essere legato alla \textit{View} e descrive il comportamento di quest'ultima con funzioni associate. Quindi mentre il \textit{Controller} esegue logiche di business prima del \textit{rendering} della \textit{View}, il \textit{ViewModel} definisce il comportamento dell'applicazione a \textit{runtime}.
 
 \subsubsection{Vuetify}
 \label{subsubsec:vuetify}
 
-Vuetify è un \gls{frameworkg} UI completo costruito su Vue.js nel 2014 ed il suo obiettivo è fornire agli sviluppatori gli strumenti per poter creare esperienze utente ricche e coinvolgenti. A differenza di altri framework Vuetify è progettato da zero in modo tale da renderlo facile da imparare ed essere gratificante da padroneggiare con centinaia di componenti realizzate dalle specifiche di Material Design.\\
-Un pregio di questo \gls{frameworkg} è che adotta un approccio al mobile, questo significa che la \gls{web applicationg} sviluppata tramite esso sarà pienamente utilizzabile immediatamente su un tablet, un telefono ed un computer. Inoltre è un \gls{frameworkg} in sviluppo attivo che viene aggiornato settimanalmente rispondendo ai problemi e relativi report della community. Un altro pregio è, come si può vedere nell'immagine sottostante, il gran numero di funzionalità che possiede Vuetify in confronto agli altri framework di Vue.
+Vuetify è un \gls{frameworkg} UI completo costruito su Vue.js nel 2014 ed il suo obiettivo è fornire agli sviluppatori gli strumenti per poter creare esperienze utente ricche e coinvolgenti. A differenza di altri \gls{frameworkg} Vuetify è progettato da zero in modo tale da renderlo facile da imparare ed essere gratificante da padroneggiare con centinaia di componenti realizzate dalle specifiche di \textit{Material Design}.\\
+Un pregio di questo \gls{frameworkg} è che adotta un approccio al mobile, questo significa che la \gls{web applicationg} sviluppata tramite esso sarà pienamente utilizzabile immediatamente su un tablet, un telefono ed un computer. Inoltre è un \gls{frameworkg} in sviluppo attivo che viene aggiornato settimanalmente rispondendo ai problemi e relativi \textit{report} della \textit{community}. Un altro pregio è, come si può vedere nell'immagine sottostante, il gran numero di funzionalità che possiede Vuetify in confronto agli altri \gls{frameworkg} di Vue.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\columnwidth]{vuetify.png}
@@ -53,8 +53,8 @@ Un pregio di questo \gls{frameworkg} è che adotta un approccio al mobile, quest
 \subsubsection{Vuex}
 \label{subsubsec:vuex}
 
-Vuex è una libreria  per applicazioni sviluppate in Vue.js e serve come store centralizzato per tutti i componenti dell'applicazione. Esso contiene stati e regole che assicurano che lo stato può essere modificato solo in modo prevedibile.\\
-Inoltre Vuex è uno state management pattern che aiuta a salvare i dati in maniera persistente per poterli utilizzare all'interno dell'applicazione da diversi componenti in maniera efficiente.
+Vuex è una libreria  per applicazioni sviluppate in Vue.js e serve come \textit{store} centralizzato per tutti i componenti dell'applicazione. Esso contiene stati e regole che assicurano che lo stato può essere modificato solo in modo prevedibile.\\
+Inoltre Vuex è uno \textit{state management pattern} che aiuta a salvare i dati in maniera persistente per poterli utilizzare all'interno dell'applicazione da diversi componenti in maniera efficiente.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.7\columnwidth]{vuex.png}
@@ -68,25 +68,25 @@ Inoltre Vuex è uno state management pattern che aiuta a salvare i dati in manie
 \subsubsection{Github}
 \label{subsubsec:github}
 
-Github è un servizio web e cloud-based fondato nel 2008 che aiuta gli sviluppatori ad archiviare, gestire il codice, tracciare e controllare le modifiche. I due argomenti principali legati a Github sono: controllo versioni e Git.\\
+Github è un servizio web e \textit{cloud-based} fondato nel 2008 che aiuta gli sviluppatori ad archiviare, gestire il codice, tracciare e controllare le modifiche. I due argomenti principali legati a Github sono: controllo versioni e Git.\\
 Il controllo versioni aiuta a tracciare e gestire le modifiche del codice di un progetto software: più un progetto risulta essere di grandi dimensioni più il controllo delle versioni diventa fondamentale. Infatti questo aiuta gli sviluppatori a lavorare con sicurezza attraverso due azioni:
 \begin{itemize}
-	\item branching: uno sviluppatore duplica parte del codice sorgente, detto repository, in modo da apportare modifiche in modo sicuro senza influenzare l'intero progetto;
-	\item merging: una volta che lo sviluppatore è certo di aver prodotto del codice funzionante può fondere quel codice nel quello sorgente e renderlo ufficiale.
+	\item \textit{branching}: uno sviluppatore duplica parte del codice sorgente, detto \textit{repository}, in modo da apportare modifiche in modo sicuro senza influenzare l'intero progetto;
+	\item \textit{merging}: una volta che lo sviluppatore è certo di aver prodotto del codice funzionante può fondere quel codice nel quello sorgente e renderlo ufficiale.
 \end{itemize}
 In questo modo tutte le modifiche possono essere monitorate e, se necessario, ripristinate. Inoltre grazie a questi concetti è possibile lavorare sullo stesso progetto in diversi sviluppatori senza problemi di ripetizioni di codice o conflitti durante lo sviluppo.\\
 Git è un sistema di controllo versioni distribuito realizzato nel 2005, ovvero l'intero codice base e la cronologia sono disponibili sul computer di ogni sviluppatore. In questo modo è possibile creare facilmente ramificazioni e fusioni.\\
-Per organizzare il lavoro abbiamo creato un'\textit{organization}, prodotto offerto da Github che rende più semplice la collaborazione su più progetti contemporaneamente. Infatti ogni stagista ha creato la propria repository all'interno di questo spazio comune in modo tale da lavorare con i colleghi contemporaneamente e dare la possibilità ai tutor aziendali di visionare il lavoro svolto.
+Per organizzare il lavoro abbiamo creato un'\textit{organization}, prodotto offerto da Github che rende più semplice la collaborazione su più progetti contemporaneamente. Infatti ogni stagista ha creato la propria \textit{repository} all'interno di questo spazio comune in modo tale da lavorare con i colleghi contemporaneamente e dare la possibilità ai tutor aziendali di visionare il lavoro svolto.
 
 \subsubsection{Figma}
 \label{subsubsec:figma}
 
 Figma è uno strumento nato nel 2016 rivolto ai web designer che hanno bisogno di un tool per la progettazione di interfacce. I vantaggi offerti da questo strumento sono i seguenti:
 \begin{itemize}
-	\item accessibilità multipiattaforma
-	\item sistema di collaborazione in real-time
-	\item utilizzo degli strumenti responsive oriented per una progettazione ottimale
-	\item lavora in vettoriale
+	\item accessibilità multipiattaforma;
+	\item sistema di collaborazione in \textit{real-time};
+	\item utilizzo degli strumenti \textit{responsive oriented} per una progettazione ottimale;
+	\item lavora in vettoriale.
 \end{itemize}
 Grazie a questo strumento io e gli altri stagisti legati all'ambito \gls{front endg} abbiamo potuto creare dei prototipi delle maschere che avremmo dovuto sviluppare.
 
@@ -99,19 +99,19 @@ Stoplight è una piattaforma di progettazione \gls{api} collaborativa che si int
 	\item bisogna confidare l'uno nell'altro per aggiungere valore e risolvere problemi attraverso il lavoro di squadra;
 	\item bisogna cercare di capire gli altri ascoltando, indagando e rispondendo con attenzione.
 \end{itemize}
-Grazie a questa piattaforma si può aiutare gli utenti interni ed esterni ad integrarsi rapidamente alll'\gls{api} di un altro utente pubblicando documentazione interattiva, tutorial ed esempi di codice sempre aggiornati.\\
+Grazie a questa piattaforma si può aiutare gli utenti interni ed esterni ad integrarsi rapidamente all'\gls{api} di un altro utente pubblicando documentazione interattiva, tutorial ed esempi di codice sempre aggiornati.\\
 Noi stagisti abbiamo utilizzato questo strumento per non far dipendere lo sviluppo del \gls{front endg} con quello del \gls{back endg} e quindi riuscire a sviluppare in parallelo le due parti ed effettuare l'integrazione tra le due solo dopo esserci assicurati di avere il lavoro quasi concluso e poterci concentrare sulla risoluzione di possibili problemi in integrazione.
 
 \subsubsection{Visual Studio Code}
 \label{subsubsec:visual-studio-code}
 
-Visual Studio Code è un editor di codice sorgente sviluppato da Microsoft nel 2015. Esso può essere utilizzato con diversi linguaggi di programmazione, infatti incorpora in esso diverse funzioni che variano dal linguaggio con cui si sta programmando. Un punto di forza di questo editor è la sua grande malleabilità, infatti l'utente può installare o disinstallare diversi plugin in funzione del linguaggio che sta utilizzando.\\
-Un altro punto di forza è la sua integrazione con Git facilitando il controllo di versione del lavoro svolto dal programmatore che ha la possibilità di controllare le modifiche fatte, risolvere eventuali conflitti e salvare il lavoro nella repository. Altri punti di forza di questo editor sono i seguenti:
+Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} nel 2015. Esso può essere utilizzato con diversi linguaggi di programmazione, infatti incorpora in esso diverse funzioni che variano dal linguaggio con cui si sta programmando. Un punto di forza di questo editor è la sua grande malleabilità, infatti l'utente può installare o disinstallare diversi \textit{plugin} in funzione del linguaggio che sta utilizzando.\\
+Un altro punto di forza è la sua integrazione con Git facilitando il controllo di versione del lavoro svolto dal programmatore che ha la possibilità di controllare le modifiche fatte, risolvere eventuali conflitti e salvare il lavoro nella \textit{repository}. Altri punti di forza di questo editor sono i seguenti:
 \begin{itemize}
-	\item IntelliSense, estensione che fornisce suggerimenti di completamento per variabili, metodi e moduli. In particolare per i metodi fornisce una breve spiegazione dei parametri che accettano e del loro funzionamento;
-	\item Debug semplificato grazie ai plugin messi a disposizione e all'interfaccia grafica intuitiva;
+	\item \textit{IntelliSense}, estensione che fornisce suggerimenti di completamento per variabili, metodi e moduli. In particolare per i metodi fornisce una breve spiegazione dei parametri che accettano e del loro funzionamento;
+	\item \textit{Debug} semplificato grazie ai \textit{plugin} messi a disposizione e all'interfaccia grafica intuitiva;
 	\item Modifica veloce delle righe di codice grazie ad avvisi su codice sospetto, possibilità di selezionare più righe contemporaneamente e suggerimenti sui parametri;
-	\item Navigazione e refactoring del codice semplice.
+	\item Navigazione e \textit{refactoring} del codice semplice.
 \end{itemize}
 
 \section{Organizzazione dei file}
@@ -173,26 +173,26 @@ Per quanto riguarda la cartella legata al codice, essendo la più importante, ne
 		\item il file \textbf{\textit{Main.js}} di tipo javascript che inizializza il file \textit{App.vue} ed è responsabile dell'impostazione dei plugin e dei componenti di terze parti da utilizzare per lo sviluppo dell'applicazione;
 		\item la cartella \textbf{\textit{assets}} contenente le immagini utilizzate all'interno del sito, come quella del logo;
 		\item la cartella \textbf{\textit{components}} contenente la barra di navigazione (navbar) e le varie finestre d'avviso;
-		\item la cartella \textbf{\textit{plugins}} contenente i file javascript dei plugin utilizzati per lo sviluppo, in questo caso di Vuetify;
-		\item la cartella \textbf{\textit{router}} contenente un omonimo file javascript dove vengono definite le route ovvero le varie pagine in cui può navigare l'utente;
+		\item la cartella \textbf{\textit{plugins}} contenente i file Javascript dei \textit{plugin} utilizzati per lo sviluppo, in questo caso di Vuetify;
+		\item la cartella \textbf{\textit{router}} contenente un omonimo file Javascript dove vengono definite le \textit{route} ovvero le varie pagine in cui può navigare l'utente;
 		\item la cartella \textbf{\textit{store}} contenente i file per la configurazione delle chiamate al database e lo state management;
 		\item la cartella \textbf{\textit{view}} contenente le possibili schermate che può visualizzare l'utente;
 		\item la cartella \textbf{\textit{tests}} che contiene la sottocartella \textbf{\textit{unit}} dove sono presenti i test di unità effettuati.
 	\end{itemize}
 \end{itemize}
 
-\textit{Nelle sezioni di seguito verranno spiegate in dettaglio il funzionamento delle chiamate al back end e delle varie maschere implementate con le loro criticità}
+\textit{Nelle sezioni di seguito verranno spiegate in dettaglio il funzionamento delle chiamate al \gls{back endg} e delle varie maschere implementate con le loro criticità}
 
 \section{Chiamate al back end}
 \label{sec:chiamate-back-end}
 
-Il file principale, \textbf{\textit{index.js}}, contiene la configurazione di Vuex e del persisted state con l'inclusione dei moduli che sono di numero tanti quanti sono i servizi del \gls{back endg} che vanno ad invocare. Per rendere più chiaro ed efficiente il lavoro ho creato quindi il file \textbf{\textit{CurrentUser.js}}, legato al servizio del back end dell'utente, e il file \textbf{\textit{NftService.js}}, legato al servizio del back end degli NFT.\\
+Il file principale, \textbf{\textit{index.js}}, contiene la configurazione di Vuex e del \textit{persisted state} con l'inclusione dei moduli che sono di numero tanti quanti sono i servizi del \gls{back endg} che vanno ad invocare. Per rendere più chiaro ed efficiente il lavoro ho creato quindi il file \textbf{\textit{CurrentUser.js}}, legato al servizio del \gls{back endg} dell'utente, e il file \textbf{\textit{NftService.js}}, legato al servizio del \gls{back endg} degli \gls{NFTg}.\\
 Entrambi i file hanno la struttura uguale e quello che cambia è il contenuto, infatti sono caratterizzati da quattro elementi costanti:
 \begin{itemize}
-	\item state, contenente le risorse che verranno utilizzate nei metodi;
-	\item actions, contenente i metodi dove vengono fatte le invocazioni ai servizi del backend tramite axios;
-	\item mutations, contenente i metodi che modificano le risorse, sono come un equivalente dei metodi set;
-	\item getters, contenente i metodi che ritornano i valori presenti nelle risorse.
+	\item \textit{state}, contenente le risorse che verranno utilizzate nei metodi;
+	\item \textit{actions}, contenente i metodi dove vengono fatte le invocazioni ai servizi del \gls{back endg} tramite axios;
+	\item \textit{mutations}, contenente i metodi che modificano le risorse, sono come un equivalente dei metodi set;
+	\item \textit{getters}, contenente i metodi che ritornano i valori presenti nelle risorse.
 \end{itemize}
 
 Gli state del file \textbf{\textit{CurrentUser.js}} li ho resi persistenti, in questo modo potranno essere utilizzati all'interno della \gls{web applicationg}, per esempio dopo che l'utente ha eseguito l'autenticazione utilizzo i suoi dati per visualizzare il suo nome nel bottone che lo porta alla pagina personale. Queste informazioni possono essere utilizzate per fare dei controlli che decidono se reindirizzare o meno certe parti della \gls{web applicationg}.\\
@@ -222,7 +222,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante viene eseguita una chiamata POST al database specificando i dati dell'utente che verranno inviati. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
+	Come si può vedere dallo \textit{snippet} di codice soprastante viene eseguita una chiamata POST al database specificando i dati dell'utente che verranno inviati. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel \textit{localStorage} del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
 	\item \textbf{Registrazione}:
 	\begin{lstlisting}[caption=Registrazione., label=lst::registrazione]
 		signUp({ commit }, user) {
@@ -246,7 +246,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante viene eseguita anche per la registrazione una chiamata POST al database specificando i dati dell'utente che verranno inviati, di numero maggiore rispetto ai dati per l'autenticazione. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel localStorage del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
+	Come si può vedere dallo \textit{snippet} di codice soprastante viene eseguita anche per la registrazione una chiamata POST al database specificando i dati dell'utente che verranno inviati, di numero maggiore rispetto ai dati per l'autenticazione. Se la chiamata va a buon fine i dati dell'utente autenticato verranno salvati sia nello stato persistente che nel \textit{localStorage} del web e si verrà reindirizzati alla homepage. Se invece la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna il \gls{back endg}.
 	\item \textbf{Logout}:
 	\begin{lstlisting}[caption=Logout., label=lst::logout]
 		logOut({ commit }) {
@@ -254,7 +254,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			localStorage.clear('user');
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante questo è l'unico metodo che non possiede chiamate effettive al \gls{back endg}, infatti quando l'utente vuole effettuare il log out verrà semplicemente chiamato un metodo che fa ritornare l'utente alla homepage e cancella i dati dell'utente nello stato persistente. Infine viene svuotato il localStorage dai dati dell'utente.
+	Come si può vedere dallo \textit{snippet} di codice soprastante questo è l'unico metodo che non possiede chiamate effettive al \gls{back endg}, infatti quando l'utente vuole effettuare il log out verrà semplicemente chiamato un metodo che fa ritornare l'utente alla homepage e cancella i dati dell'utente nello stato persistente. Infine viene svuotato il \textit{localStorage} dai dati dell'utente.
 	\item \textbf{modifica dei dati personali}
 	\begin{lstlisting}[caption=Modifica dei dati personali., label=lst::modDati]
 		updateUser({ commit }, user) {
@@ -277,7 +277,7 @@ In questo file ho implementato diversi servizi legati all'utente. I servizi in q
 			})
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante viene eseguita la modifica dei dati personali tramite una chiamata PUT al database specificando i dati dell'utente che verranno inviati e inviando come parametro l'id identificativo dell'utente. Se la chiamata va a buon fine i dati aggiornati verranno salvati sia nello stato persistente che nel localStorage del web. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
+	Come si può vedere dallo \textit{snippet} di codice soprastante viene eseguita la modifica dei dati personali tramite una chiamata PUT al database specificando i dati dell'utente che verranno inviati e inviando come parametro l'id identificativo dell'utente. Se la chiamata va a buon fine i dati aggiornati verranno salvati sia nello stato persistente che nel \textit{localStorage} del web. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{Modifica della password}:
 	\begin{lstlisting}[caption=Modifica della password., label=lst::modPassword]
 		updatePassword({}, user) {
@@ -308,7 +308,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante questo metodo serve per ritornare le opere dell'utente. Questo avviene tramite una chiamata GET al database fornendo come parametro l'id identificativo dell'utente.
+	Come si può vedere dallo \textit{snippet} di codice soprastante questo metodo serve per ritornare le opere dell'utente. Questo avviene tramite una chiamata GET al database fornendo come parametro l'id identificativo dell'utente.
 	\item \textbf{Categorie disponibili}:
 	\begin{lstlisting}[caption=Categorie disponibili., label=lst::catDisponibili]
 		getCategories({ commit }) {
@@ -317,7 +317,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante questo metodo serve per ritornare le categorie disponibili nel database tramite una chiamata GET al database. Questo metodo viene invocato ogni qual volta serve sapere le categorie presenti, quindi ad esempio per caricare una nuova opera, per modificarne una o per la creazione del filtro presente nella homepage.
+	Come si può vedere dallo \textit{snippet} di codice soprastante questo metodo serve per ritornare le categorie disponibili nel database tramite una chiamata GET al database. Questo metodo viene invocato ogni qual volta serve sapere le categorie presenti, quindi ad esempio per caricare una nuova opera, per modificarne una o per la creazione del filtro presente nella homepage.
 	\item \textbf{Caricamento di una nuova opera}:
 	\begin{lstlisting}[caption=Caricamento di una nuova opera., label=lst::uploadOpera]
 		uploadOpera({ commit }, opera) {
@@ -334,7 +334,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante questo metodo serve per caricare una nuova opera nel database. Questo avviene tramite una chiamata POST al database fornendo come dati le informazioni della nuova opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
+	Come si può vedere dallo \textit{snippet} di codice soprastante questo metodo serve per caricare una nuova opera nel database. Questo avviene tramite una chiamata POST al database fornendo come dati le informazioni della nuova opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{Modifica di un'opera esistente}:
 	\begin{lstlisting}[caption=Modifica di un'opera esistente., label=lst::modOpera]
 		updateOpera({ commit }, opera) {
@@ -361,7 +361,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante questo metodo serve per modificare un'opera già presente nel database. Questo avviene tramite una chiamata PUT al database fornendo come dati le nuove informazioni dell'opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
+	Come si può vedere dallo \textit{snippet} di codice soprastante questo metodo serve per modificare un'opera già presente nel database. Questo avviene tramite una chiamata PUT al database fornendo come dati le nuove informazioni dell'opera e come parametro l'id identificativo dell'utente. Se invece  la chiamata non va a buon fine viene effettuato il catch dell'errore e viene settato un messaggio di errore che può variare in base all'errore che ritorna dal \gls{back endg}.
 	\item \textbf{Visualizzazione delle opere nella home}:
 	\begin{lstlisting}[caption=Visualizzazione delle opere nella home., label=lst::visOpereHome]
 		getHomeOperas({ commit }) {
@@ -370,7 +370,7 @@ In questo file ho implementato diversi servizi legati agli NFT. I servizi in que
 			});
 		}
 	\end{lstlisting}
-	Come si può vedere dallo snippet di codice soprastante questo metodo serve per ottenere tutte le opere presenti nel database per mostrarle nella homepage. Questo avviene tramite una chiamata GET al database.
+	Come si può vedere dallo \textit{snippet} di codice soprastante questo metodo serve per ottenere tutte le opere presenti nel database per mostrarle nella homepage. Questo avviene tramite una chiamata GET al database.
 \end{itemize}
 
 \section{Maschere implementate}
@@ -434,8 +434,8 @@ In questa pagine l'utente può effettuare la registrazione nel sito inserendo: n
 	\item l'email inserita deve essere valida\\
 	\textit{esempio di email valida: nome@email.it};
 	\item la data di nascita deve corrispondere ad una persona maggiorenne;
-	\item il wallett address inserito deve essere valido\\ 
-	\textit{esempio di wallett address valido: 0x390c7a1EA64e521B725b1869Ea054DDBF05F9abe};
+	\item il\textit{ wallett address} inserito deve essere valido\\ 
+	\textit{esempio di \textit{wallett address} valido: 0x390c7a1EA64e521B725b1869Ea054DDBF05F9abe};
 	\item la password deve avere una lunghezza di minimo otto caratteri di cui almeno una lettera maiuscola, una minuscola, un numero e una carattere speciale;
 	\item la conferma della password deve essere identica alla password appena inserita.
 \end{itemize}
@@ -461,7 +461,7 @@ In questa pagina l'utente può visualizzare le sue informazioni personali e le o
 \subsection{Upload opera}
 \label{subsec:upload-opera}
 
-In questa pagina è possibile per l'utente aggiungere una nuova opera. I campi da compilare sono: titolo, descrizione, file, prezzo. Quando l'utente carica un file verranno generati automaticamente una preview del file specifica in base al tipo del file inserito e un campo non modificabile che indica il tipo del file inserito. Similmente alla pagina di registrazione sono state inserite delle regole che, se non rispettate, generano un errore visualizzabile tramite una scritta sotto il campo che si sta modificando. Le regole in questione sono:
+In questa pagina è possibile per l'utente aggiungere una nuova opera. I campi da compilare sono: titolo, descrizione, file, prezzo. Quando l'utente carica un file verranno generati automaticamente una \textit{preview} del file specifica in base al tipo del file inserito e un campo non modificabile che indica il tipo del file inserito. Similmente alla pagina di registrazione sono state inserite delle regole che, se non rispettate, generano un errore visualizzabile tramite una scritta sotto il campo che si sta modificando. Le regole in questione sono:
 \begin{itemize}
 	\item tutti i campi sono obbligatori, quindi devono essere tutti compilati.
 \end{itemize}
@@ -476,7 +476,7 @@ Questo campo non `e modificabile da parte dell'utente.
 \subsection{Gestione opere}
 \label{subsec:gestione-opere}
 
-L'utente può unicamente modificare una sua opera ma non può cancellarla. Questo è dovuto al fatto che al momento dell'upload l'opera verrà caricata sulla blockchain rendendola un elemento unico ed irripetibile quindi non può cancellarla. Per motivi analoghi l'utente ha delle restrizioni anche nella modifica dell'opera; infatti di essa può modificare solo: titolo, descrizione, prezzo e categorie di appartenenza. Un altro campo non modificabile è il tipo del file caricato.
+L'utente può unicamente modificare una sua opera ma non può cancellarla. Questo è dovuto al fatto che al momento dell'upload l'opera verrà caricata sulla \gls{blockchaing} rendendola un elemento unico ed irripetibile quindi non può cancellarla. Per motivi analoghi l'utente ha delle restrizioni anche nella modifica dell'opera; infatti di essa può modificare solo: titolo, descrizione, prezzo e categorie di appartenenza. Un altro campo non modificabile è il tipo del file caricato.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.9\columnwidth]{cap4/modificaOpera.png}
@@ -509,5 +509,5 @@ L'utente dopo aver premuto un bottone con la dicitura "Modifica password", vedr�
 \section{Generazione della preview}
 \label{sec:generazione-preview}
 
-Per quanto riguarda le immagini presenti nella home page, nella pagina dell'utente e nelle finestre di dialogo che mostrano i dettagli dell'opera, viene generata una preview in base alla tipologia del file. Infatti se il tipo del file è un immagine si potrà visualizzare una preview effettiva di essa, altrimenti se il tipo del file è audio, video o documento verranno visualizzate delle immagini preimpostate che fanno intuire la tipologia del file.\\
-Questo ragionamento viene applicato anche quando l'utente carica una nuova opera. Infatti nel momento in cui l'utente seleziona un file verrà mostrata una preview generata utilizzando il ragionamento appena descritto.
+Per quanto riguarda le immagini presenti nella homepage, nella pagina dell'utente e nelle finestre di dialogo che mostrano i dettagli dell'opera, viene generata una \textit{preview} in base alla tipologia del file. Infatti se il tipo del file è un immagine si potrà visualizzare una \textit{preview} effettiva di essa, altrimenti se il tipo del file è audio, video o documento verranno visualizzate delle immagini preimpostate che fanno intuire la tipologia del file.\\
+Questo ragionamento viene applicato anche quando l'utente carica una nuova opera. Infatti nel momento in cui l'utente seleziona un file verrà mostrata una \textit{preview} generata utilizzando il ragionamento appena descritto.

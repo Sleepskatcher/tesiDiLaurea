@@ -37,21 +37,21 @@ Sono presenti numerosi vantaggi e svantaggi di questo linguaggio, più important
 		\item Velocità: è un linguaggio veloce, siccome ogni funzione può essere avviata immediatamente invece di dover contattare il server ed aspettare una sua risposta;
 		\item Semplicità: è un linguaggio relativamente semplice da imparare ed implementare;
 		\item Versatilità: è un linguaggio che lavora bene con altri linguaggi e può essere usato in una grande varietà di applicazioni, infatti può essere inserito in una pagina web indipendentemente dall'estensione del file e può essere utilizzato all'interno di script scritti in altri linguaggi;
-		\item Carico del server: essendo Javascript un linguaggio lato client questo fa ridurre le domande al server del sito web.
+		\item Carico del server: essendo Javascript un linguaggio lato \textit{client} questo fa ridurre le domande al server del sito web.
 	\end{itemize}
 	\item \textbf{Svantaggi}:
 	\begin{itemize}
 		\item Sicurezza: visto che il codice si esegue nel computer dell'utente può essere sfruttato per scopi dannosi;
-		\item Affidamento all'utente finale: gli script lato server producono sempre lo stesso risultato ma gli script lato client possono risultare imprevedibili perché possono essere interpretati in maniera differente in base al browser utilizzato. Questo difetto però può essere mitigato provando il proprio codice sui browser più utilizzati dagli utenti.
+		\item Affidamento all'utente finale: gli script lato server producono sempre lo stesso risultato ma gli \textit{script} lato \textit{client} possono risultare imprevedibili perché possono essere interpretati in maniera differente in base al browser utilizzato. Questo difetto però può essere mitigato provando il proprio codice sui browser più utilizzati dagli utenti.
 	\end{itemize}
 \end{itemize}
 
 \subsection{Vue.js}
 \label{subsec:vue.js}
 
-Vue.js è un \gls{frameworkg} javascript open-source per la configurazione di interfacce utente e single-page application.\\
+Vue.js è un \gls{frameworkg} Javascript \textit{open-source} per la configurazione di interfacce utente e \textit{single-page application}.\\
 
-\textit{Questo framework verrà spiegato nel dettaglio nel capitolo riguardante la Progettazione e codifica.}
+\textit{Questo framework è stato spiegato nel dettaglio nel capitolo \ref{cap:progettazione-codifica} .}
 
 %**************************************************************
 \section{Nozioni secondarie}
@@ -71,45 +71,45 @@ Riguardo a questo argomento sono stati ripassati in dettaglio due argomenti: il 
 \subsubsection{Servlet}
 \label{subsubsec:servlet}
 
-Una Servlet è un oggetto scritto in linguaggio Java in grado di gestire le richieste generate da uno o più client attraverso scambi di messaggi tra il server ed i client stessi. La servlet può utilizzare le Java API per implementare le diverse funzionalità e le specifiche servlet API per mettere a disposizione un'interfaccia standard per gestire le comunicazioni tra il web client e la servlet. E' importante sapere che le servlet non hanno delle GUI.\\
+Una Servlet è un oggetto scritto in linguaggio Java in grado di gestire le richieste generate da uno o più client attraverso scambi di messaggi tra il server ed i client stessi. La Servlet può utilizzare le Java API per implementare le diverse funzionalità e le specifiche Servlet API per mettere a disposizione un'interfaccia standard per gestire le comunicazioni tra il \textit{web client} e la Servlet. E' importante sapere che le Servlet non hanno delle GUI.\\
 I vantaggi della Servlet sono:
 \begin{itemize}
-	\item \textit{efficienza}: la Servlet viene istanziata e caricata una sola volta, alla prima invocazione, mentre le chiamate successive sono gestite chiamando nuovi thread;
-	\item \textit{portabilità}: le servlet possono essere facilmente programmate e "portate" in diverse piattaforme;
-	\item \textit{persistenza}: dopo essere stata caricata in memoria la servlet rimane anche nelle successive richieste;
-	\item \textit{gestione delle sessioni}: grazie alle servlet si riesce a superare la limitazione dei protocolli HTTP senza stati.
+	\item \textit{efficienza}: la Servlet viene istanziata e caricata una sola volta, alla prima invocazione, mentre le chiamate successive sono gestite chiamando nuovi \textit{thread};
+	\item \textit{portabilità}: le Servlet possono essere facilmente programmate e "portate" in diverse piattaforme;
+	\item \textit{persistenza}: dopo essere stata caricata in memoria la Servlet rimane anche nelle successive richieste;
+	\item \textit{gestione delle sessioni}: grazie alle Servlet si riesce a superare la limitazione dei protocolli HTTP senza stati.
 \end{itemize}
 
 \subsubsection{REST}
 \label{subsubsec:rest}
 
-REST è un insieme di principi architetturali per la progettazione che rendono il Web adatto a realizzare Web Service. I principi sono:
+REST è un insieme di principi architetturali per la progettazione che rendono il Web adatto a realizzare \textit{Web Service}. I principi sono:
 \begin{itemize}
 	\item \textit{identificazione delle risorse}: per risorsa si intende qualsiasi elemento in oggetto di elaborazione, ovvero qualsiasi oggetto su cui è possibile effettuare operazioni. Ciascuna risorsa deve essere identificata univocamente, il meccanismo più naturale è il concetto di URI;
 	\item \textit{uso esplicito dei metodi HTTP}: serve un meccanismo per indicare le operazioni che si possono fare sulle risorse, per questo motivo si sfruttano i metodi predefiniti del protocollo HTTP;
-	\item \textit{risorse autodescrittive}: è opportuno usare i formati più standard possibili per semplificare l'interazione con il client. Il tipo di rappresentazione è indicato nella risposta HTTP;
-	\item \textit{collegamenti tra risorse}: le risorse devono essere messe tra di loro in relazione tramite link ipertestuali, è un principio detto HATEOAS;
+	\item \textit{risorse autodescrittive}: è opportuno usare i formati più standard possibili per semplificare l'interazione con il \textit{client}. Il tipo di rappresentazione è indicato nella risposta HTTP;
+	\item \textit{collegamenti tra risorse}: le risorse devono essere messe tra di loro in relazione tramite link ipertestuali, è un principio detto \textit{HATEOAS};
 	\item \textit{comunicazione senza stato}: è un principio secondo il quale una richiesta non ha alcuna relazione con le richieste precedenti e successive.
 \end{itemize}
 
 \subsection{Spring}
 \label{subsec:spring}
 
-Il \gls{frameworkg} Spring è una piattafroma Java che fornisce un'infrastruttura di supporto per sviluppatori in Java in modo tale che loro si occupino dalla parte dell'applicazione. I benefici di Spring sono:
+Il \gls{frameworkg} Spring è una piattaforma Java che fornisce un'infrastruttura di supporto per sviluppatori in Java in modo tale che loro si occupino dalla parte dell'applicazione. I benefici di Spring sono:
 \begin{itemize}
-	\item dipendenze esplicite ed evidenti grazie alla Dependency Injection;
-	\item i contenitori legati all'Inversion of Control tendono ad essere leggeri;
+	\item dipendenze esplicite ed evidenti grazie alla \textit{Dependency Injection};
+	\item i contenitori legati all'\textit{Inversion of Control} tendono ad essere leggeri;
 	\item non reinventa nulla, prende quello che è già esistente e lo rende disponibile;
 	\item è organizzato in modo modulare quindi il programmatore si preoccupa del pacchetto che gli interessa;
-	\item è un model view controller framework ben formato;
+	\item è un \textit{model view controller} \gls{frameworkg} ben formato;
 	\item fornisce un'interfaccia di gestione delle transizioni.
 \end{itemize}
-Di questo framework in particolare ho studiato: Spring Boot, Spring Data, Spring Data JPA e Spring Data REST. Nelle sezioni successive verranno spiegati questi concetti.
+Di questo \gls{frameworkg} in particolare ho studiato: Spring Boot, Spring Data, Spring Data JPA e Spring Data REST. Nelle sezioni successive verranno spiegati questi concetti.
 
 \subsubsection{Spring Boot}
 \label{subsubsec:spring-boot}
 
-Spring Boot è un progetto Spring che ha lo scopo di rendere più semplice lo sviluppo e l'esecuzione delle applicazioni Spring. Un'applicazione richiede molti metadati per la configurazione e puoi risultare pesante, Spring Boot invece alleggerisce questo meccanismo fornendo una configurazione automatica. Infatti esso è basato su opinioni e convenzioni proprie per avere una configurazione minima con la possibilità di riscriverle se necessario. Alcune caratteristiche principali sono legate ai seguenti aspetti:
+Spring Boot è un progetto Spring che ha lo scopo di rendere più semplice lo sviluppo e l'esecuzione delle applicazioni Spring. Un'applicazione richiede molti \textit{metadati} per la configurazione e puoi risultare pesante, Spring Boot invece alleggerisce questo meccanismo fornendo una configurazione automatica. Infatti esso è basato su opinioni e convenzioni proprie per avere una configurazione minima con la possibilità di riscriverle se necessario. Alcune caratteristiche principali sono legate ai seguenti aspetti:
 \begin{itemize}
 	\item \textit{starter dependencies}, ovvero configurazione automatica delle librerie e delle dipendenze;
 	\item configurazione automatica di \textit{bean} e componenti e delle loro relazioni;
@@ -132,7 +132,7 @@ Spring Data è un progetto ad alto livello di Spring con lo scopo di unificare e
 \subsubsection{Spring Data JPA}
 \label{subsubsec:spring-data-jpa}
 
-Spring Data JPA aiuta ad implementare facilmente sistemi basati su archiviazione di tipo JPA, framework per il linguaggio di programmazione Java che gestisce la persistenza dei dati in un database relazionale che usano le Java Platform, Standard Edition e Java Enterprise Edition. Questo modulo infatti si occupa del supporto per i livelli di accesso ai dati basati su JPA e rende più semplice la creazione di applicazioni basate su Spring che utilizzano tecnologie di accesso ai dati.\\
+Spring Data JPA aiuta ad implementare facilmente sistemi basati su archiviazione di tipo JPA, \gls{frameworkg} per il linguaggio di programmazione Java che gestisce la persistenza dei dati in un database relazionale che usano le \textit{Java Platform}, \textit{Standard Edition} e \textit{Java Enterprise Edition}. Questo modulo infatti si occupa del supporto per i livelli di accesso ai dati basati su JPA e rende più semplice la creazione di applicazioni basate su Spring che utilizzano tecnologie di accesso ai dati.\\
 Per molto tempo implementare un livello di accesso ai dati è risultato complicato: era necessario scrivere molto codice per eseguire \textit{query} semplici, impaginazione e controllo dei dati. Spring Data JPA mira a ridurre lo sforzo all'importo effettivamente necessario. Lo sviluppatore scriverà le interfacce del \textit{repository}, inclusi i metodi personalizzati, e sarà Spring a fornire l'implementazione automaticamente.
 
 \subsubsection{Spring Data REST}
@@ -144,19 +144,19 @@ Spring Data REST definisce automaticamente gli \textit{endpoint} di aggiunta, vi
 \subsection{Blockchain}
 \label{subsec:blockchain}
 
-La Blockchain è una tecnologia che sfrutta le caratteristiche di una rete informatica di nodi e consente di gestire ed aggiornare, in modo univoco e sicuro, un registro contenente dati ed informazioni in maniera aperta, condivisa e distribuita senza la necessità di un'entità centrale di controllo e verifica. Le applicazioni della blockchain sono contraddistinte dalla necessità di decentralizzazione e disintermediazione in modo da evitare banche, istituzioni finanziare e così via.\\
-Queste tecnologia abilita l'Internet of Value e si basa su un registro distribuito, sistema in cui i nodi di una rete possiedono la medesima copia di un database che modificano e leggono i dati indipendentemente dagli altri nodi. Il registro di queste tecnologie è strutturato come una catena di blocchi contenenti le transazioni ed il consenso è distribuito su tutti i nodi della rete, in questo modo i nodi possono partecipare al processo di validazione delle transazioni da includere nel registro.
+La \gls{blockchaing} è una tecnologia che sfrutta le caratteristiche di una rete informatica di nodi e consente di gestire ed aggiornare, in modo univoco e sicuro, un registro contenente dati ed informazioni in maniera aperta, condivisa e distribuita senza la necessità di un'entità centrale di controllo e verifica. Le applicazioni della \gls{blockchaing} sono contraddistinte dalla necessità di decentralizzazione e disintermediazione in modo da evitare banche, istituzioni finanziare e così via.\\
+Queste tecnologia abilita l'\textit{Internet of Value} e si basa su un registro distribuito, sistema in cui i nodi di una rete possiedono la medesima copia di un database che modificano e leggono i dati indipendentemente dagli altri nodi. Il registro di queste tecnologie è strutturato come una catena di blocchi contenenti le transazioni ed il consenso è distribuito su tutti i nodi della rete, in questo modo i nodi possono partecipare al processo di validazione delle transazioni da includere nel registro.
 
 \subsection{Ethereum}
 \label{subsec:ethereum}
 
-Ethereum è una piattaforma digitale che permette di costruire una gamma di applicazioni decentralizzate. Queste applicazioni possono includere programmi di sicurezza, sistemi elettorali e metodi di pagamento. Questa piattaforma opera fuori dal mandato delle autorità centrali ed è per questo motivo che opera nel mercato delle criptovalute.\\
-Ethereum funziona come piattaforma software basata sulla tecnologia blockchain, simile a quella dei bitcoin perchè conserva le transazioni, ed inoltre permette ai programmatori di costruire applicazioni decentralizzate. Queste applicazioni sono software open source che utilizzano la blockchain e gli smart contract e non hanno bisogno di mediatori. 
+\gls{ethereumg} è una piattaforma digitale che permette di costruire una gamma di applicazioni decentralizzate. Queste applicazioni possono includere programmi di sicurezza, sistemi elettorali e metodi di pagamento. Questa piattaforma opera fuori dal mandato delle autorità centrali ed è per questo motivo che opera nel mercato delle criptovalute.\\
+\gls{ethereumg} funziona come piattaforma software basata sulla tecnologia \gls{blockchaing}, simile a quella dei \textit{bitcoin} perché conserva le transazioni, ed inoltre permette ai programmatori di costruire applicazioni decentralizzate. Queste applicazioni sono \textit{software open source} che utilizzano la \gls{blockchaing} e gli \textit{smart contract} e non hanno bisogno di mediatori. 
 
 \subsection{NFT}
 \label{subsec:nft}
 
-\gls{NFT}, acronimo per Non Fungible Token, si tratta di token insostituibili che rappresentano la proprietà di un bene, come un'opera d'arte digitale o reale. Un token è un oggetto con un valore particolare e simbolico, in particolare un token sulla blockchain è un'informazione digitale registrata su un registro distribuito. Questa informazione è associata ad un utente specifico e rappresenta un certo tipo di diritto, come proprietà di un oggetto o la ricezione di un pagamento. Gli \gls{NFT} sono diversi dagli altri token perchè sono insostituibili, unici, indivisibili ed è questo il motivo per cui si prestano alla cessione dei diritti di proprietà di opere d'arte.\\
+\gls{NFT}, acronimo per Non Fungible Token, si tratta di \textit{token} insostituibili che rappresentano la proprietà di un bene, come un'opera d'arte digitale o reale. Un \textit{token} è un oggetto con un valore particolare e simbolico, in particolare un \textit{token} sulla \gls{blockchaing} è un'informazione digitale registrata su un registro distribuito. Questa informazione è associata ad un utente specifico e rappresenta un certo tipo di diritto, come proprietà di un oggetto o la ricezione di un pagamento. Gli \gls{NFT} sono diversi dagli altri \textit{token} perché sono insostituibili, unici, indivisibili ed è questo il motivo per cui si prestano alla cessione dei diritti di proprietà di opere d'arte.\\
 Quando una persona compra un \gls{NFT} si deve capire che:
 \begin{itemize}
 	\item non ha comprato l'opera: fisicamente essa rimane sempre in possesso dell'autore;

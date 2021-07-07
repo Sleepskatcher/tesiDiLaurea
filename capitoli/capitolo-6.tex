@@ -12,12 +12,12 @@
 \section{Strumenti per la verifica}
 \label{sec:strumenti-per-verifica}
 
-Per verificare il codice prodotto ho utilizzato la libreria ufficiale di test Vue Test Utils. Grazie a questa libreria si possono testare le interazioni dell'utente, come un click di un bottone, le chiamate al \gls{back endg}, le routes e l'utilizzo di Vuex.
+Per verificare il codice prodotto ho utilizzato la libreria ufficiale di test \textit{Vue Test Utils}. Grazie a questa libreria si possono testare le interazioni dell'utente, come un click di un bottone, le chiamate al \gls{back endg}, le \textit{routes} e l'utilizzo di Vuex.
 
 \section{Verifica}
 \label{sec:verifica}
 
-Per ogni componente ho creato un file che, nella fase di run, viene chiamato \textit{test suit}. Ogni \textit{text suit} può contenere al suo interno diversi test.
+Per ogni componente ho creato un file che, nella fase di \textit{run}, viene chiamato \textit{test suit}. Ogni \textit{text suit} può contenere al suo interno diversi test.
 \begin{lstlisting}[caption=Esempio di test-Pagina di login., label=lst::esTest]
 	describe('login.vue', () => {
 		let vuetify;
@@ -58,14 +58,14 @@ Per ogni componente ho creato un file che, nella fase di run, viene chiamato \te
 		});
 	});
 \end{lstlisting}
-Prendiamo come esempio lo snippet di codice soprastante che è il \textit{test suit} per la pagina di login.
-Per prima cosa viene effettuato il mock del componente tramite il comando \textit{shallowMount} dove vengono anche specificati i vari plugin e lo store utilizzati. Ogni \textit{it} presente nel codice rappresenta un singolo test.\\
+Prendiamo come esempio lo \textit{snippet} di codice soprastante che è il \textit{test suit} per la pagina di login.
+Per prima cosa viene effettuato il \textit{mock} del componente tramite il comando \textit{shallowMount} dove vengono anche specificati i vari \textit{plugin} e lo \textit{store} utilizzati. Ogni \textit{it} presente nel codice rappresenta un singolo test.\\
 Il primo test che ho effettuato è il controllo che la pagina renderizzi correttamente i suoi contenuti.
-I controlli successivi che ho effettuato sono invece legati all'interazione dell'utente con gli elementi presenti nella pagina. I controlli che eseguo sono ad esempio che il bottone sia disabilitato se l'utente non compila correttamente tutti i campi della form, oppure che i campi della form vengano compilati dopo l'interazione dell'utente.\\
+I controlli successivi che ho effettuato sono invece legati all'interazione dell'utente con gli elementi presenti nella pagina. I controlli che eseguo sono ad esempio che il bottone sia disabilitato se l'utente non compila correttamente tutti i campi della \textit{form}, oppure che i campi della \textit{form} vengano compilati dopo l'interazione dell'utente.\\
 Per ogni componente ho effettuato test analoghi a quello appena descritto.
 
 \section{Validazione e collaudo}
 
-Infine durante le ultime settimane ho effettuato in collaborazione con un collega stagista l'integrazione al \gls{back endg} risolvendo possibili bug dovuti alle incongruenze tra il back end effettivo e quello simulato tramite stoplight.\\
+Infine durante le ultime settimane ho effettuato in collaborazione con un collega stagista l'integrazione al \gls{back endg} risolvendo possibili bug dovuti alle incongruenze tra il \gls{back endg} effettivo e quello simulato tramite stoplight.\\
 Inoltre ho prodotto il documento tecnico richiesto dall'azienda riguardante il mio lavoro in modo che chiunque arrivi a prendere in mano il mio codice possa capire la logica che regge il mio lavoro.\\
 Infine io e gli altri stagisti che hanno svolto lo stage nello stesso periodo abbiamo preparato una breve presentazione con demo effettiva del lavoro svolto da mostrare l'ultimo giorno a tutti i dipendenti disponibili dell'azienda.

@@ -58,15 +58,23 @@ I prodotti offerti più noti dell'azienda sono i seguenti:
 	\end{center}
 \end{figure}
 
-Il progetto da svolgere proposto dall'azienda per lo stage è una \gls{web applicationg} chiamata NFTLab legata all'ambito blockchain e \gls{NFTg}. Nonostante siano due tecnologie relativamente recenti, in questo ultimo anno la loro popolarità è cresciuta in maniera esponenziale e questo le porta ad essere un argomento stimolante ed interessante per il progetto di stage.\\
-All'interno della \gls{web applicationg} l'utente può navigare nella pagina principale e visualizzare le opere multimediali poste in vendita, eseguire l'accesso se possiede un account nel sito oppure registrarsi come nuovo utente. Le opere multimediali possono essere delle immagini, dei video, delle gif, degli audio o dei documenti. \\
+Il progetto da svolgere proposto dall'azienda per lo stage è una \gls{web applicationg} chiamata NFTLab legata all'ambito \gls{blockchaing} e \gls{NFTg}. Nonostante siano due tecnologie relativamente recenti, in questo ultimo anno la loro popolarità è cresciuta in maniera esponenziale e questo le porta ad essere un argomento stimolante ed interessante per il progetto di stage.\\
+All'interno della \gls{web applicationg} l'utente può navigare nella pagina principale e visualizzare le opere multimediali poste in vendita, eseguire l'accesso se possiede un account nel sito oppure registrarsi come nuovo utente. Le opere multimediali possono essere delle immagini, dei video, delle \textit{gif}, degli audio o dei documenti. \\
 Dopo aver effettuato l'accesso, l'utente può modificare i propri dati, inserire una nuova opera multimediale, modificare i dati di quelle precedentemente inserite e comprare un'opera multimediale caricata nel sito da un altro utente.\\
-Essendo un progetto legato al concetto di blockchain e \gls{NFT} le azioni di compravendita verranno effettuate tramite lo scambio di una moneta virtuale detta Ethereum. Un utente viene identificato tramite l'indirizzo del wallet con cui acquisterà o caricherà una nuova opera multimediale.\\
-Quando un utente carica un'opera multimediale, il file viene salvato tramite codice hash nella blockchain ed in questo modo le opere caricate saranno univoche. Infatti salvando queste informazioni nella blockchain viene creato un timestamp che funge da certificato di attribuzione dell'opera all'utente che carica o compra l'opera multimediale. In questo modo nessun altro utente può registrare la stessa opera a suo nome poichè una funzione hash produce sempre e solo un risultato rendendo uniche le opere multimediali.\\
-Per realizzare questi aspetti sono state implementate diverse maschere, ovvero interfacce utente, tramite il framework Vue.js, uno strumento utile allo sviluppo di \gls{web applicationg} reattive e a pagina singola.\\
+Essendo un progetto legato al concetto di \gls{blockchaing} e \gls{NFT} le azioni di compravendita verranno effettuate tramite lo scambio di una moneta virtuale detta \gls{ethereumg}$_G$. Un utente viene identificato tramite l'indirizzo del \textit{wallet} con cui acquisterà o caricherà una nuova opera multimediale.\\
+Quando un utente carica un'opera multimediale, il file viene salvato tramite codice \textit{hash} nella \gls{blockchaing} ed in questo modo le opere caricate saranno univoche. Infatti salvando queste informazioni nella \gls{blockchaing} viene creato un \textit{timestamp} che funge da certificato di attribuzione dell'opera all'utente che carica o compra l'opera multimediale. In questo modo nessun altro utente può registrare la stessa opera a suo nome poichè una funzione hash produce sempre e solo un risultato rendendo uniche le opere multimediali.\\
+Per realizzare questi aspetti sono state implementate diverse maschere, ovvero interfacce utente, tramite il \gls{frameworkg} Vue.js, uno strumento utile allo sviluppo di \gls{web applicationg} reattive e a pagina singola.\\
 Parte del percorso di stage è stata riservata ad un periodo di studio delle tecnologie necessarie allo sviluppo delle maschere e ad un periodo di studio delle tecnologie legate al \gls{back endg} per poter collaborare al meglio con i colleghi stagisti che lavorano su questo aspetto.
 
 \subsection{Il gruppo di lavoro}
+
+Il gruppo di stagisti incaricati allo sviluppo di questo progetto è composto dai seguenti membri:
+\begin{itemize}
+	\item io, Margherita, addetta allo sviluppo di maschere per il \gls{front endg} tramite il \gls{frameworkg} Vue.js;
+	\item Filippo Fantinato, addetto allo studio e all'integrazione della \gls{blockchaing} con il \gls{back endg};
+	\item Andrea Cecchin, addetto allo sviluppo del \gls{back endg};
+	\item Michele Baldisseri, addetto allo sviluppo di maschere per il \gls{front endg} tramite il \gls{frameworkg} \gls{Angular.jsg}$_G$.
+\end{itemize}
 
 %**************************************************************
 \section{Organizzazione del lavoro}
@@ -75,7 +83,7 @@ Parte del percorso di stage è stata riservata ad un periodo di studio delle tec
 \subsection{Modello di sviluppo}
 \label{subsec:modello-sviluppo}
 
-L'azienda adotta il modello di sviluppo Agile che si basa sull'interazione continua con gli \gls{stakeholderg}$_G$ e predilige:
+L'azienda adotta il modello di sviluppo \textit{Agile} che si basa sull'interazione continua con gli \gls{stakeholderg}$_G$ e predilige:
 \begin{itemize}
 	\item gli individui e le loro interazioni piuttosto che i processi e gli strumenti;
 	\item il software funzionante piuttosto che una documentazione esaustiva;
@@ -83,12 +91,12 @@ L'azienda adotta il modello di sviluppo Agile che si basa sull'interazione conti
 	\item essere propositivi verso il cambiamento piuttosto che rifiutarlo.
 \end{itemize}
 L'idea di questo modello non si basa quindi su uno sviluppo sequenziale ma sul concetto di rivedere di continuo le specifiche adeguandole durante l'avanzamento dello sviluppo software. In questo modo si possono apportare agilmente modifiche mediante metodologie iterative ed incrementali con un continuo scambio di pareri ed informazioni tra gli sviluppatori ed il committente. Il progetto di stage è stato portato avanti utilizzando il metodo \gls{scrumg}$_G$.\\
-Scrum è il metodo più diffuso tra i modelli di sviluppo e prevede di dividere il progetto in blocchi di lavoro detti sprint, alla fine dei quali si crea un incremento del prodotto software. Esso prevede vari \textit{meeting} per controllare il lavoro svolto ed organizzare il lavoro da svolgere nel prossimo periodo. Inoltre nel corso dello sviluppo del progetto l'azienda organizza diversi \textit{meeting} con gli \gls{stakeholderg} e i membri del progetto per valutare l'andamento dello sprint.\\
+\gls{scrumg} è il metodo più diffuso tra i modelli di sviluppo e prevede di dividere il progetto in blocchi di lavoro detti \textit{sprint}, alla fine dei quali si crea un incremento del prodotto software. Esso prevede vari \textit{meeting} per controllare il lavoro svolto ed organizzare il lavoro da svolgere nel prossimo periodo. Inoltre nel corso dello sviluppo del progetto l'azienda organizza diversi \textit{meeting} con gli \gls{stakeholderg} e i membri del progetto per valutare l'andamento dello sprint.\\
 Gli incontri legati a questo modello di sviluppo che vengono svolti di solito sono:
 \begin{itemize}
-	\item \textit{sprint planning meeting}: tenuto ad inizio sprint per poter organizzare il lavoro;
-	\item \textit{daily scrum}: riunione giornaliera del team di sviluppo per monitorare l'andamento dello sprint;
-	\item \textit{sprint review}: tenuto a fine sprint per valutare i risultati ottenuti e quali cambiamenti apportare per lo sprint successivo.
+	\item \textit{sprint planning meeting}: tenuto ad inizio \textit{sprint} per poter organizzare il lavoro;
+	\item \textit{daily scrum}: riunione giornaliera del team di sviluppo per monitorare l'andamento dello \textit{sprint};
+	\item \textit{sprint review}: tenuto a fine \textit{sprint} per valutare i risultati ottenuti e quali cambiamenti apportare per lo sprint successivo.
 \end{itemize}
 \begin{figure}[H]
 	\begin{center}
@@ -96,7 +104,7 @@ Gli incontri legati a questo modello di sviluppo che vengono svolti di solito so
 		\caption{Metodo Scrum}
 	\end{center}
 \end{figure}
-La situazione di emergenza sanitaria ancora non conclusa mi ha portato a vivere un'esperienza lavorativa diversa dai colleghi degli anni precedenti, infatti ha fatto sì che lo stage fosse organizzato in modalità mista: in parte da remoto ed in parte in azienda (solitamente uno o due giorni alla settimana). A causa di ciò non ho potuto vivere appieno questo modello di sviluppo vista l'impossibilità di essere sempre presente in azienda. Per questo motivo il giorno concordato con i colleghi stagisti ed il tutor aziendale per andare in azienda è stato sfruttato per fare un daily scrum alternativo data la sua cadenza settimanale.\\ 
+La situazione di emergenza sanitaria ancora non conclusa mi ha portato a vivere un'esperienza lavorativa diversa dai colleghi degli anni precedenti, infatti ha fatto sì che lo stage fosse organizzato in modalità mista: in parte da remoto ed in parte in azienda (solitamente uno o due giorni alla settimana). A causa di ciò non ho potuto vivere appieno questo modello di sviluppo vista l'impossibilità di essere sempre presente in azienda. Per questo motivo il giorno concordato con i colleghi stagisti ed il tutor aziendale per andare in azienda è stato sfruttato per fare un \textit{daily scrum} alternativo data la sua cadenza settimanale.\\ 
 Nonostante l'emergenza sanitaria ancora in corso ho potuto comunque constatare l’efficacia e la funzionalità di questo modello di sviluppo, soprattutto per un progetto software in evoluzione quale è stato quello a cui ho lavorato.\\
 
 \subsection{Strumenti per l'organizzazione e la comunicazione}
@@ -105,7 +113,7 @@ Nonostante l'emergenza sanitaria ancora in corso ho potuto comunque constatare l
 \subsubsection{Trello}
 \label{subsubsec:trello}
 
-Trello è una piattaforma online tramite la quale si possono gestire i progetti in modo semplice, gratuito e flessibile. Questa piattaforma risulta essere molto utile per l'organizzazione e la gestione del workflow online.\\
+Trello è una piattaforma online tramite la quale si possono gestire i progetti in modo semplice, gratuito e flessibile. Questa piattaforma risulta essere molto utile per l'organizzazione e la gestione del \textit{workflow} online.\\
 Tramite questa piattaforma è possibile rappresentare le attività da svolgere in schede inserite sotto apposite colonne di avanzamento. In base a quanto si è riusciti a realizzare, è possibile spostare manualmente o automaticamente lo stato di avanzamento di ogni scheda. Le diciture più comuni delle colonne utilizzate nella piattaforma sono le seguenti:
 \begin{itemize}
 	\item \textbf{attività}: elenco di schede della attività da svolgere nel corso del progetto;
@@ -147,7 +155,7 @@ Per comunicare con l'intero gruppo di stagisti l'azienda ha proposto di utilizza
 
 \subsubsection{Notion}
 \label{subsubsec:notion}
-Notion è un'applicazione che fornisce elementi come note, database, bacheche kanban, wiki, calendari e promemoria. L'utente può collegare questi elementi tra di loro per creare il proprio sistema per la gestione della presa di appunti, la conoscenza, la gestione dei dati e la gestione dei progetti. Questo può essere un sistema da utilizzare da soli oppure in collaborazione.\\
+Notion è un'applicazione che fornisce elementi come note, database, bacheche \textit{kanban}, \textit{wiki}, calendari e promemoria. L'utente può collegare questi elementi tra di loro per creare il proprio sistema per la gestione della presa di appunti, la conoscenza, la gestione dei dati e la gestione dei progetti. Questo può essere un sistema da utilizzare da soli oppure in collaborazione.\\
 L'azienda ha deciso di adottare questa applicazione per segnare le presenze in azienda in modo da potersi organizzare tra i dipendenti e noi stagisti e poter rispettare le norme vigenti sul Covid.
 
 \section{Pianificazione del lavoro}
